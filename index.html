@@ -17,16 +17,16 @@
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgW dark:bg-bgD bg-no-repeat bg-center sm:bg-transparent"
+      class="relative bg-bgW dark:bg-bgD bg-no-repeat bg-center sm:bg-transparent min-w-md mb-10"
     >
       <!-- conteinerhero -->
-      <div class="container mx-auto px-6 text-center md:pt-5">
+      <div class="w-2/3 mx-auto px-6 text-center md:pt-5">
         <img
           src="./images/whitemode/sunW.svg"
           class="absolute right-5 top-5"
           alt=""
         />
-        <div class="-space-y-5">
+        <div class="-space-y-5 pt-20 md:pt-0">
           <p class="text-6xl pt-5 uppercase tracking-thewidest">
             WYDRUKUJ SWOJE
           </p>
@@ -40,20 +40,29 @@
           alt=""
           class="mx-auto mt-5"
         />
-        <p class="text-4xl uppercase tracking-thewidest pb-5">
+        <p class="text-4xl uppercase tracking-thewidest pb-5 hidden md:block">
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
+        <button
+          class="block -bottom-5 right-5 p-3 rounded-md w-52 bg-goldish hover:scale-95 md:absolute mb-5 mx-auto"
+        >
+          <p class="text-3xl uppercase">drukuj</p>
+        </button>
       </div>
     </section>
-    <nav class="mx-auto sticky top-0 shadow hidden sm:block z-1">
+    <nav class="sticky top-0 shadow hidden sm:block z-1">
       <!-- flex container for nav items -->
       <div
-        class="bg-gray-400 flex flex-row w-full items-center justify-center space-x-10 uppercase h-10 md:text-xl md:space-x-12 xl:space-x-16 xl:text-2xl"
+        class="bg-gray-400 w-full px-6 space-x-10 uppercase h-10 text-3xl md:space-x-0"
       >
-        <a href="#">o nas</a>
-        <a href="#">instrukcja</a>
-        <a href="#">zdjecia 360</a>
-        <a href="#">sprawdz to</a>
+        <div class="w-2/3 mx-auto">
+          <div class="justify-around flex flex-row">
+            <div><a href="#">o nas</a></div>
+            <div><a href="#">instrukcja</a></div>
+            <div><a href="#">zdjecia 360</a></div>
+            <div><a href="#">sprawdź to </a></div>
+          </div>
+        </div>
       </div>
     </nav>
   </body>
