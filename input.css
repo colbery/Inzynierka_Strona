@@ -2,16 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-#gora {
-  background-image: url("../images/sub.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media (max-width: 576px) {
-  #gora {
-    background-image: url("../images/mobile/image-hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+@media (max-width: 768px) {
+  #hero {
+    background-image: none;
   }
 }
