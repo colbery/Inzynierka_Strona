@@ -11,13 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Staatliches&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
     <title>proj</title>
   </head>
   <body class="">
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgW dark:bg-bgD bg-no-repeat bg-center sm:bg-transparent min-w-md mb-8"
+      class="relative bg-bgW dark:bg-bgD bg-no-repeat bg-center sm:bg-transparent mb-8"
     >
       <!-- conteinerhero -->
       <div class="w-2/3 mx-auto px-6 text-center md:pt-5">
@@ -27,10 +31,10 @@
           alt=""
         />
         <div class="-space-y-5 pt-20 md:pt-0">
-          <p class="text-6xl pt-5 uppercase tracking-thewidest">
+          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
             WYDRUKUJ SWOJE
           </p>
-          <p class="text-6xl pt-5 uppercase tracking-thewidest">
+          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
             ZDJĘCIE <span class="text-goldish">360°</span>
           </p>
         </div>
@@ -50,12 +54,12 @@
         </button>
       </div>
     </section>
-    <nav class="sticky top-0 shadow shadow-xl hidden md:block z-1">
+    <nav class="bg-white sticky top-0 shadow-xl hidden md:block z-1">
       <!-- flex container for nav items -->
-      <div class="w-full px-6 space-x-10 uppercase h-10 text-3xl md:space-x-0">
+      <div class="w-full px-6 space-x-10 uppercase h-10 lg:text-3xl text-2xl md:space-x-0">
         <div class="w-2/3 mx-auto">
           <div class="justify-around flex flex-row">
-            <div><a href="#">o nas</a></div>
+            <div><a href="#" ">o nas</a></div>
             <div><a href="#">instrukcja</a></div>
             <div><a href="#">zdjecia 360</a></div>
             <div><a href="#">sprawdź to </a></div>
@@ -63,5 +67,118 @@
         </div>
       </div>
     </nav>
+    <section id="consist">
+      <div class="w-2/3 text-center mx-auto pt-5">
+        <div class="-space-y-5 mb-5">
+          <p class="text-6xl pt-5 uppercase tracking-thewidest">Na czym to</p>
+          <p class="text-6xl pt-5 uppercase tracking-thewidest">polega</p>
+        </div>
+        <p class="font-opensans text-3xl mb-5">
+          Wgraj swoje <span class="text-goldish">zdjęcie sferyczne</span> i
+          wydrukuj w postaci siatki wielościanu, która po złożeniu stworzy
+          okrągłą figurę gotową do złożenia
+        </p>
+        <img src="./images/img/gif.png" class="w-full mb-10" alt="" />
+        <img
+          src="./images/img/3xdodecahendron.jpg"
+          class="w-full mb-5"
+          alt=""
+        />
+      </div>
+      <div class="w-full">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide relative"
+          data-bs-ride="carousel"
+        >
+          <div
+            class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+          >
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner relative w-full overflow-hidden">
+            <div class="carousel-item active relative float-left w-full">
+              <img
+                src="./images/img/3xdodecahendron.jpg"
+                class="block w-full"
+                alt="..."
+              />
+              <div
+                class="carousel-caption hidden md:block absolute text-center"
+              >
+                <h5 class="text-xl">Karuzela</h5>
+                <p>Karuzela</p>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img
+                src="./images/img/3xdodecahendron.jpg"
+                class="block w-full"
+                alt="..."
+              />
+              <div
+                class="carousel-caption hidden md:block absolute text-center"
+              >
+                <h5 class="text-xl">Karuzela</h5>
+                <p>Karuzela</p>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <img src="./images/img/gif.png" class="block w-full" alt="..." />
+              <div
+                class="carousel-caption hidden md:block absolute text-center"
+              >
+                <h5 class="text-xl">Karuzela</h5>
+                <p>Karuzela</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon inline-block bg-no-repeat"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon inline-block bg-no-repeat"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </html>
