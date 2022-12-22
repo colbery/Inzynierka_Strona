@@ -17,24 +17,28 @@
     />
     <title>proj</title>
   </head>
-  <body class="">
+  <body class="bg-darkish">
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgW dark:bg-bgD bg-no-repeat bg-center sm:bg-transparent mb-8"
+      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-center sm:bg-transparent mb-8"
     >
       <!-- conteinerhero -->
       <div class="w-2/3 mx-auto px-6 text-center md:pt-5">
         <img
-          src="./images/whitemode/sunW.svg"
+          src="./images/darkmode/sunD.svg"
           class="absolute right-5 top-5"
           alt=""
         />
         <div class="-space-y-5 pt-20 md:pt-0">
-          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
+          <p
+            class="text-3xl text-white pt-5 uppercase tracking-thewidest md:text-6xl"
+          >
             WYDRUKUJ SWOJE
           </p>
-          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
+          <p
+            class="text-3xl text-white pt-5 uppercase tracking-thewidest md:text-6xl"
+          >
             ZDJĘCIE <span class="text-goldish">360°</span>
           </p>
         </div>
@@ -44,22 +48,26 @@
           alt=""
           class="mx-auto mt-5"
         />
-        <p class="text-4xl uppercase tracking-thewidest pb-5 hidden md:block">
+        <p
+          class="text-4xl text-white uppercase tracking-thewidest pb-5 hidden md:block"
+        >
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
         <button
           class="block -bottom-7 right-5 p-3 rounded-md w-52 bg-goldish hover:scale-95 md:absolute mb-5 mx-auto"
         >
-          <p class="text-3xl uppercase">drukuj</p>
+          <p class="text-3xl uppercase text-white">drukuj</p>
         </button>
       </div>
     </section>
-    <nav class="bg-white sticky top-0 shadow-xl hidden md:block z-1">
+    <nav
+      class="bg-darkish text-white sticky top-0 shadow-xl hidden md:block z-1"
+    >
       <!-- flex container for nav items -->
-      <div class="w-full px-6 space-x-10 uppercase h-10 lg:text-3xl text-2xl md:space-x-0">
+      <div class="w-full uppercase h-10 md:text-3xl text-2xl">
         <div class="w-2/3 mx-auto">
           <div class="justify-around flex flex-row">
-            <div><a href="#" ">o nas</a></div>
+            <div><a href="#">o nas</a></div>
             <div><a href="#">instrukcja</a></div>
             <div><a href="#">zdjecia 360</a></div>
             <div><a href="#">sprawdź to </a></div>
@@ -69,21 +77,19 @@
     </nav>
     <section id="consist">
       <div class="w-2/3 text-center mx-auto pt-5">
-        <div class="-space-y-5 mb-5">
-          <p class="text-6xl pt-5 uppercase tracking-thewidest">Na czym to</p>
+        <div class="-space-y-5 mb-5 text-white">
+          <p class="text-6xl pt-5 uppercase tracking-thewidest text-white">
+            Na czym to
+          </p>
           <p class="text-6xl pt-5 uppercase tracking-thewidest">polega</p>
         </div>
-        <p class="font-opensans text-3xl mb-5">
+        <p class="text-{2.25rem} text-white md:text-4xl font-opensans mb-5">
           Wgraj swoje <span class="text-goldish">zdjęcie sferyczne</span> i
           wydrukuj w postaci siatki wielościanu, która po złożeniu stworzy
           okrągłą figurę gotową do złożenia
         </p>
         <img src="./images/img/gif.png" class="w-full mb-10" alt="" />
-        <img
-          src="./images/img/3xdodecahendron.jpg"
-          class="w-full mb-5"
-          alt=""
-        />
+        <img src="./images/img/3xdode.png" class="w-full mb-5" alt="" />
       </div>
       <div class="w-full">
         <div
@@ -118,7 +124,7 @@
           <div class="carousel-inner relative w-full overflow-hidden">
             <div class="carousel-item active relative float-left w-full">
               <img
-                src="./images/img/3xdodecahendron.jpg"
+                src="./images/img/3xdode.png"
                 class="block w-full"
                 alt="..."
               />
@@ -131,7 +137,7 @@
             </div>
             <div class="carousel-item relative float-left w-full">
               <img
-                src="./images/img/3xdodecahendron.jpg"
+                src="./images/img/3xdode.png"
                 class="block w-full"
                 alt="..."
               />
@@ -180,43 +186,45 @@
       </div>
     </section>
     <section id="instruction" class=" ">
-      <div class="text-center mx-auto w-2/3 pt-40  ">
-        <p class="text-3xl uppercase tracking-wider  md:text-6xl">
-          Instrukcja
-        </p>
+      <div class="text-center mx-auto w-2/3 pt-40 text-white">
+        <p class="text-3xl uppercase tracking-wider md:text-6xl">Instrukcja</p>
         <div class="text-center pt-40">
-          <p class="text-3xl uppercase   md:text-5xl">
-          potrzebne 
-        </p>
-        <p class="text-3xl uppercase   md:text-5xl">
-          przyrządy
-        </p></div>
-        <div class="flex flex-col md:flex-row items-center  py-10 ">
-          
-            <div class="w-1/3 flex flex-col px-1">
-            <div class=""><p class="text-4xl text-goldish uppercase ">nożyczki</p></div>
-            <div><img src="./images/img/rec.png" alt="" ></div>
-            
+          <p class="text-3xl uppercase md:text-5xl">potrzebne</p>
+          <p class="text-3xl uppercase md:text-5xl">przyrządy</p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center py-10">
+          <div class="md:w-1/3 flex flex-col px-1">
+            <div class="">
+              <p class="text-4xl text-goldish uppercase">nożyczki</p>
+            </div>
+            <div><img src="./images/img/rec.png" alt="" /></div>
           </div>
-          <div class="w-1/3 flex flex-col md:mt-20 px-1 ">
-            <div><p class="text-4xl text-goldish uppercase md:hidden md:text-3xl">klej</p></div>
-            <div><img src="./images/img/rec.png" alt="" ></div>
-            <div><p class="text-4xl text-goldish uppercase hidden md:block">klej</p></div>
+          <div class="md:w-1/3 flex flex-col md:mt-20 px-1">
+            <div>
+              <p class="text-4xl text-goldish uppercase md:hidden md:text-3xl">
+                klej
+              </p>
+            </div>
+            <div><img src="./images/img/rec.png" alt="" /></div>
+            <div>
+              <p class="text-4xl text-goldish uppercase hidden md:block">
+                klej
+              </p>
+            </div>
           </div>
-          <div class="w-1/3 flex flex-col md:text-center px-1">
-            <div><p class="text-4xl text-goldish uppercase  md:text-lg  ">drukarka</p></div>
-            <div><img src="./images/img/rec.png" alt=""></div>
-            
+          <div class="md:w-1/3 flex flex-col md:text-center px-1">
+            <div>
+              <p class="text-4xl text-goldish uppercase md:text-lg">drukarka</p>
+            </div>
+            <div><img src="./images/img/rec.png" alt="" /></div>
           </div>
-          
-          
         </div>
       </div>
     </section>
 
     <section id="doit">
-     <div class="text-center mx-auto w-2/3 pt-40  ">
-      <p class="text-3xl uppercase " >jak to zrobić</p>
+      <div class="text-center mx-auto w-2/3 pt-40">
+        <p class="text-3xl uppercase">jak to zrobić</p>
       </div>
     </section>
   </body>

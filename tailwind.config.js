@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         goldish: "#FFD600",
+        darkish: "#141414",
       },
       fontFamily: {
         sans: ["Staatliches", "sans-serif"],
