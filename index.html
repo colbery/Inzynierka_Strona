@@ -21,7 +21,7 @@
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-center sm:bg-transparent mb-8"
+      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-center sm:bg-transparent pb-12"
     >
       <!-- conteinerhero -->
       <div class="w-2/3 mx-auto px-6 text-center md:pt-5">
@@ -54,36 +54,36 @@
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
         <button
-          class="block -bottom-7 right-5 p-3 rounded-md w-52 bg-goldish hover:scale-95 md:absolute mb-5 mx-auto"
+          class="block -bottom-4 right-5 p-3 rounded-md w-52 bg-goldish hover:scale-95 md:absolute mb-5 mx-auto"
         >
-          <p class="text-3xl uppercase text-white">drukuj</p>
+          <p class="text-3xl uppercase text-black">drukuj</p>
         </button>
       </div>
     </section>
     <nav
-      class="bg-darkish text-white sticky top-0 shadow-xl hidden md:block z-1"
+      class="bg-darkish text-white sticky z-2 top-0 shadow-xl hidden md:block whitespace-nowrap"
     >
       <!-- flex container for nav items -->
       <div class="w-full uppercase h-10 md:text-3xl text-2xl">
         <div class="w-2/3 mx-auto">
-          <div class="justify-around flex flex-row">
-            <div><a href="#">o nas</a></div>
-            <div><a href="#">instrukcja</a></div>
-            <div><a href="#">zdjecia 360</a></div>
-            <div><a href="#">sprawdź to </a></div>
+          <div class="justify-around flex flex-row space-x-4">
+            <div><a href="#" class="hover:text-goldish">o nas</a></div>
+            <div><a href="#" class="hover:text-goldish">instrukcja</a></div>
+            <div><a href="#" class="hover:text-goldish">zdjecia 360</a></div>
+            <div><a href="#" class="hover:text-goldish">sprawdź to </a></div>
           </div>
         </div>
       </div>
     </nav>
     <section id="consist">
-      <div class="w-2/3 text-center mx-auto pt-5">
+      <div class="w-2/3 text-center mx-auto pt-40">
         <div class="-space-y-5 mb-5 text-white">
           <p class="text-6xl pt-5 uppercase tracking-thewidest text-white">
             Na czym to
           </p>
           <p class="text-6xl pt-5 uppercase tracking-thewidest">polega</p>
         </div>
-        <p class="text-{2.25rem} text-white md:text-4xl font-opensans mb-5">
+        <p class="text-xl md:text-3xl text-white font-opensans pt-10 mb-10">
           Wgraj swoje <span class="text-goldish">zdjęcie sferyczne</span> i
           wydrukuj w postaci siatki wielościanu, która po złożeniu stworzy
           okrągłą figurę gotową do złożenia
@@ -222,9 +222,53 @@
       </div>
     </section>
 
-    <section id="doit">
-      <div class="text-center mx-auto w-2/3 pt-40">
-        <p class="text-3xl uppercase">jak to zrobić</p>
+    <section id="doit" class="overflow-x-hidden">
+      <div class="text-center mx-auto w-2/3 pt-40 text-white">
+        <p class="text-5xl uppercase my-20">jak to zrobić</p>
+
+        <div class="py-10 flex flex-col md:flex-row mx-auto">
+          <div class="md:w-1/2 flex justify-end">
+            <img src="./images/img/druk.png" alt="" class="src w-full -z-1" />
+          </div>
+          <div class="md:w-1/2 p-5 pt-10 relative z-0">
+            <p
+              class="rounded-lg bg-goldish uppercase text-black tracking-thewidest text-3xl py-3 align-center mb-10"
+            >
+              wydrukuj
+            </p>
+            <p class="text-2xl font-opensans font-light text-center">
+              Pobierz gotową siatkę bryły ze swoim obrazem i wydrukuj w wybrany
+              przez ciebie sposób!
+            </p>
+            <img
+              src="./images/darkmode/printerD.svg"
+              alt=""
+              class="sr absolute -right-full top-10 hidden md:block"
+            />
+          </div>
+        </div>
+
+        <div class="py-10 flex flex-col md:flex-row">
+          <div class="md:w-1/2 p-5 pt-10 justify-start relative">
+            <p
+              class="rounded-lg bg-goldish uppercase text-black tracking-thewidest text-3xl py-3 align-center mb-10"
+            >
+              wydrukuj
+            </p>
+            <p class="text-2xl font-opensans font-light text-center">
+              Pobierz gotową siatkę bryły ze swoim obrazem i wydrukuj w wybrany
+              przez ciebie sposób!
+            </p>
+            <img
+              src="./images/darkmode/scissorsD.svg"
+              alt=""
+              class="sr absolute -left-full top-10 hidden md:block"
+            />
+          </div>
+          <div class="md:w-1/2 flex justify-end">
+            <img src="./images/img/druk.png" alt="" class="src w-full" />
+          </div>
+        </div>
       </div>
     </section>
   </body>
