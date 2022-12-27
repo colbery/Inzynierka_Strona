@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" style="scroll-behavior: smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,7 +17,7 @@
     />
     <title>proj</title>
   </head>
-  <body class="bg-darkish">
+  <body class="bg-darkish scroll-behavior: smooth;">
     <!-- hero section -->
     <section
       id="hero"
@@ -68,7 +68,9 @@
         <div class="w-2/3 mx-auto">
           <div class="justify-around flex flex-row space-x-4">
             <div><a href="#" class="hover:text-goldish">o nas</a></div>
-            <div><a href="#" class="hover:text-goldish">instrukcja</a></div>
+            <div>
+              <a href="#instruction" class="hover:text-goldish">instrukcja</a>
+            </div>
             <div><a href="#" class="hover:text-goldish">zdjecia 360</a></div>
             <div><a href="#" class="hover:text-goldish">sprawdź to </a></div>
           </div>
@@ -397,6 +399,44 @@
         </div>
       </div>
     </section>
+
+    <section id="instruction" class=" ">
+      <div class="text-center mx-auto w-2/3 pt-40 text-white">
+        <p class="text-3xl uppercase tracking-wider md:text-6xl">Instrukcja</p>
+
+        <div class="flex">
+          <div
+            class="bg-goldish rounded-xl w-full flex flex-col md:flex-row text-center justify-center"
+          >
+            <div class="w-1/2 mx-auto">
+              <img src="./images/img/walksee.png" alt="" class="mx-auto py-5" />
+              <p>
+                walkse jest aplikacją do rejestracji zdjęc 360 oraz tworzenia
+                spacerow wirtualnych po nieruchomosciach
+              </p>
+              <p>https://walksee.pl</p>
+            </div>
+            <div class="w-1/2 hidden md:block">
+              <p>Zrob idealne zdjecie sferyczne swoim telefonem</p>
+              <img src="./images/img/hand.png" class="" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full bg-myBlack">
+      <div class="flex flex-row justify-center">
+        <p class="text-white text-center self-center text-xs">
+          ©Copyright 2022 Walksee??????
+          <br />
+          Wszelkie prawa zastrzeżone
+          <br />
+          Designed and created by Aleksander Pietrzak and Mateusz Starecki
+        </p>
+        <!-- </div> -->
+      </div>
+    </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </html>
