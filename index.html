@@ -42,13 +42,13 @@
           <img
             id="theme-toggle-dark-icon"
             src="./images/darkmode/sunD.svg"
-            class="absolute hidden right-5 top-5 ficon hover:scale-110"
+            class="absolute hidden right-5 transition top-5 ficonH hover:scale-110"
             alt=""
           />
           <img
             id="theme-toggle-white-icon"
             src="./images/whitemode/sunW.svg"
-            class="absolute hidden right-5 top-5 ficon"
+            class="absolute hidden right-5 transition top-5 ficonW hover:scale-110"
             alt=""
           />
         </button>
@@ -73,7 +73,7 @@
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
         <button
-          class="block -bottom-4 right-5 p-3 rounded-md w-52 bg-goldish hover:scale-95 md:absolute mb-5 mx-auto"
+          class="block -bottom-4 right-5 p-3 transition rounded-md w-52 bg-goldish hover:scale-95 md:absolute mb-5 mx-auto"
         >
           <p class="text-3xl uppercase text-black">drukuj</p>
         </button>
@@ -228,7 +228,7 @@
             <img src="./images/img/rec.png" alt="" class="mt-10" />
           </div>
           <div
-            class="md:w-1/3 flex flex-col px-1 mx-auto justify-center items-center text-center align-middle pt-20 mt-20"
+            class="md:w-1/3 flex flex-col-reverse md:flex-col px-1 mx-auto justify-center items-center text-center align-middle pt-20 mt-20"
           >
             <img src="./images/img/rec.png" alt="" />
             <p class="text-4xl text-goldish uppercase mt-10">klej</p>
@@ -248,9 +248,13 @@
       <div class="text-center mx-auto w-2/3 pt-40">
         <p class="text-5xl uppercase my-20 dark:text-white">jak to zrobić</p>
 
-        <div class="py-10 flex flex-col md:flex-row mx-auto">
+        <div class="py-10 flex flex-col-reverse md:flex-row mx-auto">
           <div class="md:w-1/2 flex justify-end">
-            <img src="./images/img/druk.png" alt="" class="src w-full" />
+            <img
+              src="./images/img/druk.png"
+              alt=""
+              class="src w-full transition hover:sepia"
+            />
           </div>
           <div class="md:w-1/2 p-5 pt-10 relative z-0">
             <p
@@ -259,7 +263,7 @@
               wydrukuj
             </p>
             <p
-              class="text-2xl font-opensans font-light text-center dark:text-white"
+              class="text-2xl font-opensans font-light text-center dark:text-white order-1"
             >
               Pobierz gotową siatkę bryły ze swoim obrazem i wydrukuj w wybrany
               przez ciebie sposób!
@@ -268,13 +272,13 @@
               id="printerW"
               src="./images/whitemode/printerW.svg"
               alt=""
-              class="sr absolute -right-full top-10 hidden md:block"
+              class="sr absolute -right-full transition top-10 hidden md:block hover:scale-95"
             />
             <img
               id="printerD"
               src="./images/darkmode/printerD.svg"
               alt=""
-              class="sr absolute -right-full top-10 hidden dark:md:block dark:z-10"
+              class="sr absolute -right-full transition top-10 hidden dark:md:block dark:z-10 hover:scale-95"
             />
           </div>
         </div>
@@ -296,23 +300,31 @@
               id="globeW"
               src="./images/whitemode/globeW.svg"
               alt=""
-              class="sr absolute -left-full top-10 hidden md:block"
+              class="sr absolute -left-full transition top-10 hidden md:block hover:scale-95"
             />
             <img
               id="globeD"
               src="./images/darkmode/globeD.svg"
               alt=""
-              class="sr absolute -left-full top-10 hidden dark:md:block dark:z-10"
+              class="sr absolute -left-full transition top-10 hidden dark:md:block dark:z-10 hover:scale-95"
             />
           </div>
           <div class="md:w-1/2 flex justify-end">
-            <img src="./images/img/druk.png" alt="" class="src w-full" />
+            <img
+              src="./images/img/druk.png"
+              alt=""
+              class="src w-full transition hover:sepia"
+            />
           </div>
         </div>
 
-        <div class="py-10 flex flex-col md:flex-row mx-auto">
+        <div class="py-10 flex flex-col-reverse md:flex-row mx-auto">
           <div class="md:w-1/2 flex justify-end">
-            <img src="./images/img/druk.png" alt="" class="src w-full -z-1" />
+            <img
+              src="./images/img/druk.png"
+              alt=""
+              class="src w-full -z-1 transition hover:sepia"
+            />
           </div>
           <div class="md:w-1/2 p-5 pt-10 relative z-0">
             <p
@@ -330,13 +342,13 @@
               id="scissorsW"
               src="./images/whitemode/scissorsW.svg"
               alt=""
-              class="sr absolute -right-[90%] top-10 hidden md:block"
+              class="sr absolute -right-[90%] transition top-10 hidden md:block hover:scale-95"
             />
             <img
               id="scissorsD"
               src="./images/darkmode/scissorsD.svg"
               alt=""
-              class="sr absolute -right-[90%] top-10 hidden dark:md:block dark:z-10"
+              class="sr absolute -right-[90%] transition top-10 hidden dark:md:block dark:z-10 hover:scale-95"
             />
           </div>
         </div>
@@ -356,7 +368,11 @@
             </p>
           </div>
           <div class="md:w-1/2 flex justify-end">
-            <img src="./images/img/druk.png" alt="" class="src w-full" />
+            <img
+              src="./images/img/druk.png"
+              alt=""
+              class="src w-full transition hover:sepia"
+            />
           </div>
         </div>
       </div>
@@ -377,7 +393,7 @@
               alt=""
               width="135"
               height="140"
-              class="mx-auto ficon hidden"
+              class="mx-auto ficonW hidden hover:scale-105"
             />
             <img
               id="likeD"
@@ -385,7 +401,7 @@
               alt=""
               width="135"
               height="140"
-              class="mx-auto ficon hidden"
+              class="mx-auto ficonH hidden hover:scale-105"
             />
 
             <h5
@@ -418,7 +434,7 @@
               alt=""
               width="135"
               height="140"
-              class="mx-auto hidden"
+              class="mx-auto ficonW hidden hover:scale-105"
             />
             <img
               id="smileD"
@@ -426,7 +442,7 @@
               alt=""
               width="135"
               height="140"
-              class="mx-auto hidden"
+              class="mx-auto ficonH hidden hover:scale-105"
             />
             <h5
               class="text-3xl font-bold text-center uppercase text-yellow-500 tracking-thewidest"
@@ -456,7 +472,7 @@
               alt=""
               width="135"
               height="140"
-              class="mx-auto hidden"
+              class="mx-auto ficonW hidden hover:scale-105"
             />
 
             <img
@@ -465,7 +481,7 @@
               alt=""
               width="135"
               height="140"
-              class="mx-auto hidden"
+              class="mx-auto ficonH hidden hover:scale-105"
             />
 
             <h5
@@ -495,6 +511,11 @@
           >
             <div class="w-1/2 mx-auto flex flex-col justify-between">
               <div class="min-h-lg h-1/2">
+                <p
+                  class="max-w-sm text-black pt-5 mx-auto tracking-thewidest font-sans md:hidden block"
+                >
+                  Zrob idealne zdjecie sferyczne swoim telefonem
+                </p>
                 <img
                   src="./images/img/walksee.png"
                   alt=""
@@ -539,7 +560,7 @@
       <div class="w-2/3 mx-auto">
         <div class="my-10 mt-72">
           <button
-            class="border-goldish border rounded-2xl w-full dark:text-white md:text-[8rem] text-[6rem] font-sans py-10 hover:scale-95"
+            class="border-goldish border transition rounded-2xl w-full dark:text-white md:text-[8rem] text-[6rem] font-sans py-10 hover:scale-95"
           >
             Drukuj
           </button>
