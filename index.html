@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="scroll-behavior: smooth">
+<html lang="en" style="scroll-behavior: smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script>
+      // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <script src="./js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +30,7 @@
     />
     <title>proj</title>
   </head>
-  <body class="bg-darkish scroll-behavior: smooth;">
+  <body class="dark:bg-darkish scroll-behavior: smooth;">
     <!-- hero section -->
     <section
       id="hero"
@@ -25,20 +38,26 @@
     >
       <!-- conteinerhero -->
       <div class="w-2/3 mx-auto px-6 text-center md:pt-5">
-        <img
-          src="./images/darkmode/sunD.svg"
-          class="absolute right-5 top-5"
-          alt=""
-        />
-        <div class="-space-y-5 pt-20 md:pt-0">
-          <p
-            class="text-3xl text-white pt-5 uppercase tracking-thewidest md:text-6xl"
-          >
+        <button id="theme-toggle">
+          <img
+            id="theme-toggle-dark-icon"
+            src="./images/darkmode/sunD.svg"
+            class="absolute hidden right-5 top-5"
+            alt=""
+          />
+          <img
+            id="theme-toggle-white-icon"
+            src="./images/whitemode/sunW.svg"
+            class="absolute hidden right-5 top-5"
+            alt=""
+          />
+        </button>
+
+        <div class="-space-y-5 pt-20 md:pt-0 dark:text-white">
+          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
             WYDRUKUJ SWOJE
           </p>
-          <p
-            class="text-3xl text-white pt-5 uppercase tracking-thewidest md:text-6xl"
-          >
+          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
             ZDJĘCIE <span class="text-goldish">360°</span>
           </p>
         </div>
@@ -49,7 +68,7 @@
           class="mx-auto mt-5"
         />
         <p
-          class="text-4xl text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap"
+          class="text-4xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap"
         >
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
@@ -61,7 +80,7 @@
       </div>
     </section>
     <nav
-      class="bg-darkish text-white sticky z-10 top-0 shadow-xl hidden md:block whitespace-nowrap"
+      class="dark:bg-darkish bg-white dark:text-white sticky z-10 top-0 shadow-xl hidden md:block whitespace-nowrap"
     >
       <!-- flex container for nav items -->
       <div class="w-full uppercase h-10 md:text-3xl text-2xl">
@@ -79,13 +98,15 @@
     </nav>
     <section id="consist">
       <div class="w-2/3 text-center mx-auto pt-40">
-        <div class="-space-y-5 my-10 text-white">
-          <p class="text-6xl pt-5 uppercase tracking-thewidest text-white">
+        <div class="-space-y-5 my-10 dark:text-white">
+          <p class="text-6xl pt-5 uppercase tracking-thewidest dark:text-white">
             Na czym to
           </p>
           <p class="text-6xl pt-5 uppercase tracking-thewidest">polega</p>
         </div>
-        <p class="text-xl md:text-3xl text-white font-opensans pt-10 mb-10">
+        <p
+          class="text-xl md:text-3xl dark:text-white font-opensans pt-10 mb-10"
+        >
           Wgraj swoje <span class="text-goldish">zdjęcie sferyczne</span> i
           wydrukuj w postaci siatki wielościanu, która po złożeniu stworzy
           okrągłą figurę gotową do złożenia
@@ -188,7 +209,7 @@
       </div>
     </section>
     <section id="instruction" class=" ">
-      <div class="text-center mx-auto w-2/3 pt-40 text-white">
+      <div class="text-center mx-auto w-2/3 pt-40 dark:text-white">
         <p class="text-3xl uppercase tracking-wider md:text-6xl">Instrukcja</p>
         <div class="text-center pt-40">
           <p class="text-3xl uppercase md:text-5xl">potrzebne</p>
@@ -220,7 +241,7 @@
     </section>
 
     <section id="doit" class="overflow-x-hidden">
-      <div class="text-center mx-auto w-2/3 pt-40 text-white">
+      <div class="text-center mx-auto w-2/3 pt-40 dark:text-white">
         <p class="text-5xl uppercase my-20">jak to zrobić</p>
 
         <div class="py-10 flex flex-col md:flex-row mx-auto">
@@ -229,7 +250,7 @@
           </div>
           <div class="md:w-1/2 p-5 pt-10 relative z-0">
             <p
-              class="rounded-lg bg-goldish uppercase text-black tracking-thewidest text-3xl py-3 align-center mb-10"
+              class="rounded-lg bg-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10"
             >
               wydrukuj
             </p>
@@ -238,9 +259,16 @@
               przez ciebie sposób!
             </p>
             <img
-              src="./images/darkmode/printerD.svg"
+              id="printerW"
+              src="./images/whitemode/printerW.svg"
               alt=""
               class="sr absolute -right-full top-10 hidden md:block"
+            />
+            <img
+              id="printerD"
+              src="./images/darkmode/printerD.svg"
+              alt=""
+              class="sr absolute -right-full top-10 hidden dark:md:block dark:z-10"
             />
           </div>
         </div>
@@ -257,9 +285,16 @@
               krawędzi obrazu.
             </p>
             <img
-              src="./images/darkmode/globeD.svg"
+              id="globeW"
+              src="./images/whitemode/globeW.svg"
               alt=""
               class="sr absolute -left-full top-10 hidden md:block"
+            />
+            <img
+              id="globeD"
+              src="./images/darkmode/globeD.svg"
+              alt=""
+              class="sr absolute -left-full top-10 hidden dark:md:block dark:z-10"
             />
           </div>
           <div class="md:w-1/2 flex justify-end">
@@ -282,9 +317,16 @@
               sama się składała w kształt przypominający kule
             </p>
             <img
+              id="scissorsW"
+              src="./images/whitemode/scissorsW.svg"
+              alt=""
+              class="sr absolute -right-[90%] top-10 hidden md:block"
+            />
+            <img
+              id="scissorsD"
               src="./images/darkmode/scissorsD.svg"
               alt=""
-              class="sr absolute -right-full top-10 hidden md:block"
+              class="sr absolute -right-[90%] top-10 hidden dark:md:block dark:z-10"
             />
           </div>
         </div>
@@ -401,7 +443,7 @@
     </section>
 
     <section id="instruction" class=" ">
-      <div class="text-center mx-auto w-2/3 pt-40 text-white">
+      <div class="text-center mx-auto w-2/3 pt-40 dark:text-white">
         <p class="text-3xl uppercase tracking-wider md:text-6xl mb-5">
           Zdjecie sferyczne
         </p>
@@ -456,7 +498,7 @@
       <div class="w-2/3 mx-auto">
         <div class="my-10 mt-20">
           <button
-            class="border border-goldish rounded-lg w-full text-white text-9xl font-sans py-10"
+            class="border border-goldish rounded-lg w-full dark:text-white text-9xl font-sans py-10"
           >
             Drukuj
           </button>
@@ -466,7 +508,7 @@
 
     <footer class="w-full bg-grayish py-5">
       <div class="flex flex-row justify-center">
-        <p class="text-white text-center self-center text-xs">
+        <p class="dark:text-white text-center self-center text-xs">
           ©Copyright 2022 Walksee??????
           <br />
           Wszelkie prawa zastrzeżone
