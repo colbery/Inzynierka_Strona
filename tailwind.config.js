@@ -17,7 +17,7 @@ module.exports = {
       "7xl": "72px",
     },
     letterSpacing: {
-      thewidest: ".19em",
+      thewidest: ".2em",
     },
     extend: {
       colors: {

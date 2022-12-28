@@ -86,12 +86,16 @@
       <div class="w-full uppercase h-10 md:text-3xl text-2xl">
         <div class="w-2/3 mx-auto">
           <div class="justify-around flex flex-row space-x-4">
-            <div><a href="#" class="hover:text-goldish">o nas</a></div>
+            <div><a href="#consist" class="hover:text-goldish">o nas</a></div>
             <div>
               <a href="#instruction" class="hover:text-goldish">instrukcja</a>
             </div>
-            <div><a href="#" class="hover:text-goldish">zdjecia 360</a></div>
-            <div><a href="#" class="hover:text-goldish">sprawdź to </a></div>
+            <div>
+              <a href="#doit" class="hover:text-goldish">zdjecia 360</a>
+            </div>
+            <div>
+              <a href="#print" class="hover:text-goldish">sprawdź to </a>
+            </div>
           </div>
         </div>
       </div>
@@ -351,7 +355,7 @@
     </section>
 
     <!-- sekcja funkcji  -->
-    <section id="features" class="pb-32">
+    <section id="features" class="pb-32 mt-20">
       <div class="w-2/3 mx-auto">
         <div
           class="relative container flex flex-col items-start mx-auto md:flex-row md:space-x-7"
@@ -359,21 +363,29 @@
           <!-- box 1 -->
           <div class="relative flex flex-col p-6 space-y-6 md:w-1/3">
             <!-- zdjecie pozycja -->
-
             <img
+              id="likeW"
+              src="./images/whitemode/likeW.svg"
+              alt=""
+              width="135"
+              height="140"
+              class="mx-auto ficon hidden"
+            />
+            <img
+              id="likeD"
               src="./images/darkmode/likeD.svg"
               alt=""
               width="135"
               height="140"
-              class="mx-auto ficon"
+              class="mx-auto ficon hidden"
             />
 
             <h5
-              class="text-3xl font-bold text-center uppercase text-yellow-500"
+              class="text-3xl font-bold text-center uppercase text-yellow-500 tracking-thewidest"
             >
               łatwe
             </h5>
-            <p class="text-center text-gray-400 max-w-sm">
+            <p class="text-center text-gray-400 min-w-md">
               Łatwe do złożenia, każdy może sobie z tym poradzić bez względu na
               wiek i umiejętności.
             </p>
@@ -393,18 +405,27 @@
               </div>
             </div>
             <img
+              id="smileW"
+              src="./images/whitemode/smileW.svg"
+              alt=""
+              width="135"
+              height="140"
+              class="mx-auto hidden"
+            />
+            <img
+              id="smileD"
               src="./images/darkmode/smileD.svg"
               alt=""
               width="135"
               height="140"
-              class="mx-auto"
+              class="mx-auto hidden"
             />
             <h5
-              class="text-3xl font-bold text-center uppercase text-yellow-500"
+              class="text-3xl font-bold text-center uppercase text-yellow-500 tracking-thewidest"
             >
               fajne
             </h5>
-            <p class="text-center text-gray-400 max-w-sm">
+            <p class="text-center text-gray-400 min-w-md">
               Samo składanie figury może sprawić wiele frajdy dla ciebie i
               twoich bliskich.
             </p>
@@ -422,19 +443,29 @@
               ></div>
             </div>
             <img
+              id="heartW"
+              src="./images/whitemode/heartW.svg"
+              alt=""
+              width="135"
+              height="140"
+              class="mx-auto hidden"
+            />
+
+            <img
+              id="heartD"
               src="./images/darkmode/heartD.svg"
               alt=""
               width="135"
               height="140"
-              class="mx-auto"
+              class="mx-auto hidden"
             />
 
             <h5
-              class="text-3xl uppercase font-bold text-center text-yellow-500"
+              class="text-3xl uppercase font-bold text-center text-yellow-500 tracking-thewidest"
             >
               ładne
             </h5>
-            <p class="text-center text-gray-400 max-w-sm">
+            <p class="text-center text-gray-400 min-w-md">
               Gotowe złożone zdjęcie można postawić w dowolnym miejsciu w domu
             </p>
           </div>
@@ -443,8 +474,10 @@
     </section>
 
     <section id="instruction" class=" ">
-      <div class="text-center mx-auto w-2/3 pt-40 dark:text-white">
-        <p class="text-3xl uppercase tracking-wider md:text-6xl mb-5">
+      <div class="text-center mx-auto w-2/3 pt-20 dark:text-white">
+        <p
+          class="text-3xl uppercase tracking-thewidset font-sans md:text-6xl mb-5 tracking-thewidest"
+        >
           Zdjecie sferyczne
         </p>
 
@@ -460,7 +493,7 @@
                   class="mx-auto py-5"
                 />
               </div>
-              <div>
+              <div class="ml-2">
                 <p
                   class="max-w-sm text-black mx-auto tracking-thewidest font-sans"
                 >
@@ -478,7 +511,7 @@
             <div
               class="w-1/2 hidden md:visible md:flex md:flex-col justify-between"
             >
-              <div class="pt-5">
+              <div class="py-5">
                 <p
                   class="max-w-sm text-black mx-auto tracking-thewidest font-sans"
                 >
@@ -496,9 +529,9 @@
 
     <section id="print">
       <div class="w-2/3 mx-auto">
-        <div class="my-10 mt-20">
+        <div class="my-10 mt-72">
           <button
-            class="border border-goldish rounded-lg w-full dark:text-white text-9xl font-sans py-10"
+            class="border-goldish border rounded-2xl w-full dark:text-white text-9xl font-sans py-10 hover:scale-95"
           >
             Drukuj
           </button>
@@ -515,7 +548,6 @@
           <br />
           Designed and created by Aleksander Pietrzak and Mateusz Starecki
         </p>
-        <!-- </div> -->
       </div>
     </footer>
   </body>

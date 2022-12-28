@@ -1,8 +1,12 @@
 const themeToggleBtn = document.getElementById("theme-toggle");
 const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 const themeToggleWhiteIcon = document.getElementById("theme-toggle-white-icon");
-const globeD = document.getElementById("globeD");
-const globeW = document.getElementById("globeW");
+const heartW = document.getElementById("heartW");
+const heartD = document.getElementById("heartD");
+const smileW = document.getElementById("smileW");
+const smileD = document.getElementById("smileD");
+const likeW = document.getElementById("likeW");
+const likeD = document.getElementById("likeD");
 
 if (
   localStorage.getItem("color-theme") === "dark" ||
@@ -10,8 +14,14 @@ if (
     window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
   themeToggleDarkIcon.classList.remove("hidden");
+  heartD.classList.remove("hidden");
+  smileD.classList.remove("hidden");
+  likeD.classList.remove("hidden");
 } else {
   themeToggleWhiteIcon.classList.remove("hidden");
+  heartW.classList.remove("hidden");
+  smileW.classList.remove("hidden");
+  likeW.classList.remove("hidden");
 }
 
 //sluchaj klikniecia zmiany dark => white , white => dark
@@ -21,6 +31,12 @@ themeToggleBtn.addEventListener("click", toggleMode);
 function toggleMode() {
   themeToggleDarkIcon.classList.toggle("hidden");
   themeToggleWhiteIcon.classList.toggle("hidden");
+  heartW.classList.toggle("hidden");
+  smileW.classList.toggle("hidden");
+  likeW.classList.toggle("hidden");
+  heartD.classList.toggle("hidden");
+  smileD.classList.toggle("hidden");
+  likeD.classList.toggle("hidden");
 
   //jesli dark w local storage
 
