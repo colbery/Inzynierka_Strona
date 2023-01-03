@@ -18,57 +18,60 @@
       }
     </script>
     <script src="./js/script.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Staatliches&display=swap"
-      rel="stylesheet"
-    />
-    <link
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
-    />
+    /> -->
     <title>proj</title>
+
+    <script src="./js/dodecahedron.js"></script>
+
   </head>
-  <body class="dark:bg-darkish scroll-behavior: smooth;">
+  <body class="dark:bg-darkish scroll-behavior: smooth;" onload="startGL()">
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-center sm:bg-transparent pb-12"
-    >
+      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-center sm:bg-transparent pb-12">
+
       <!-- conteinerhero -->
-      <div class="w-2/3 mx-auto px-6 text-center md:pt-5">
+      <div class="w-2/3 mx-auto px-6 text-center >
         <button id="theme-toggle">
           <img
             id="theme-toggle-dark-icon"
             src="./images/darkmode/sunD.svg"
-            class="absolute hidden right-5 transition top-5 ficonH hover:scale-110"
+            class="absolute hidden right-7 transition top-7 ficonH hover:scale-110"
             alt=""
           />
           <img
             id="theme-toggle-white-icon"
             src="./images/whitemode/sunW.svg"
-            class="absolute hidden right-5 transition top-5 ficonW hover:scale-110"
+            class="absolute hidden right-7 transition top-7 ficonW hover:scale-110"
             alt=""
           />
         </button>
 
-        <div class="-space-y-5 pt-20 md:pt-0 dark:text-white">
-          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
-            WYDRUKUJ SWOJE
-          </p>
-          <p class="text-3xl pt-5 uppercase tracking-thewidest md:text-6xl">
+        <div class="md:pt-0 dark:text-white">
+          <p class="fontSettings text-3xl pt-7 uppercase tracking-thewidest md:text-6xl">
+            WYDRUKUJ SWOJE<br>
             ZDJĘCIE <span class="text-goldish">360°</span>
-          </p>
         </div>
 
-        <img
+        <canvas id="canvas-hero" class="mx-auto mt-5 w-1/2" height="300">
+
+        </canvas>
+
+        <!-- <img
           src="./images/img/dodecahedron (1).png"
           alt=""
           class="mx-auto mt-5"
-        />
+        /> -->
         <p
-          class="text-4xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap"
+          class="fontSettings text-4xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap"
         >
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
@@ -79,13 +82,11 @@
         </button>
       </div>
     </section>
-    <nav
-      class="dark:bg-darkish bg-white dark:text-white sticky z-10 top-0 shadow-xl hidden md:block whitespace-nowrap"
-    >
+    <nav class="dark:text-white sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-grayish">
       <!-- flex container for nav items -->
-      <div class="w-full uppercase h-10 md:text-3xl text-2xl">
+      <!-- <div class="w-full uppercase h-16 md:text-3xl text-2xl">
         <div class="w-2/3 mx-auto">
-          <div class="justify-around flex flex-row space-x-4">
+          <div class="justify-around flex flex-row items-center space-x-4">
             <div><a href="#consist" class="hover:text-goldish">o nas</a></div>
             <div>
               <a href="#instruction" class="hover:text-goldish">instrukcja</a>
@@ -98,25 +99,47 @@
             </div>
           </div>
         </div>
+      </div> -->
+      <div class="w-2/3 mx-auto ">
+        <div class=" flex flex-row left-0 h-16 w-full items-center justify-around space-x-10 uppercase md:text-xl md:space-x-12 xl:space-x-16 xl:text-2xl">
+          <a href="#consist" class="traciking-widest transition-colors duration-300 hover:text-goldish">o nas</a>
+          <a href="#instruction" class="traciking-widest transition-colors duration-300 hover:text-goldish">instrukcja</a>
+          <a href="#doit" class="traciking-widest transition-colors duration-300 hover:text-goldish">zdjecia 360</a>
+          <a href="#print" class="traciking-widest transition-colors duration-300 hover:text-goldish ">sprawdź to</a>
+        </div>
       </div>
     </nav>
     <section id="consist">
       <div class="w-2/3 text-center mx-auto pt-40">
         <div class="-space-y-5 my-10 dark:text-white">
-          <p class="text-6xl pt-5 uppercase tracking-thewidest dark:text-white">
+          <p class="fontSettings text-6xl pt-5 uppercase tracking-thewidest dark:text-white">
             Na czym to
           </p>
-          <p class="text-6xl pt-5 uppercase tracking-thewidest">polega</p>
+          <p class="fontSettings text-6xl pt-5 uppercase tracking-thewidest">polega</p>
         </div>
         <p
-          class="text-xl md:text-3xl dark:text-white font-opensans pt-10 mb-10"
+          class="contentFontSettings text-xl md:text-3xl dark:text-white pt-10 mb-10"
         >
           Wgraj swoje <span class="text-goldish">zdjęcie sferyczne</span> i
           wydrukuj w postaci siatki wielościanu, która po złożeniu stworzy
           okrągłą figurę gotową do złożenia
         </p>
         <img src="./images/img/gif.png" class="w-full mb-10" alt="" />
-        <img src="./images/img/3xdode.png" class="w-full mb-5" alt="" />
+        <div class="flex flex-row justify-between	">
+          <!-- <img src="./images/img/3xdode.png" class="w-full mb-5" alt="" /> -->
+          <canvas id="canvas-left" class="canvas-left w-1/3" height="300" style="border: solid white 1px">
+            <!-- <script> startGL(canvas_left); </script> -->
+          </canvas>
+
+          <canvas id="canvas-middle" class="canvas-left w-1/3" height="300"  style="border: solid white 1px">
+            <!-- <script> startGL(canvas_left); </script> -->
+          </canvas>
+
+          <canvas id="canvas-right" class="w-1/3" height="300"  style="border: solid white 1px">
+            <!-- <script> startGL(canvas_right); </script> -->
+          </canvas>
+        </div>
+
       </div>
       <div class="w-full">
         <div
@@ -263,7 +286,7 @@
               wydrukuj
             </p>
             <p
-              class="text-2xl font-opensans font-light text-center dark:text-white order-1"
+              class="contentFontSettings text-2xl font-light text-center dark:text-white order-1"
             >
               Pobierz gotową siatkę bryły ze swoim obrazem i wydrukuj w wybrany
               przez ciebie sposób!
@@ -291,7 +314,7 @@
               wytnij
             </p>
             <p
-              class="text-2xl font-opensans font-light text-center dark:text-white"
+              class="contentFontSettings text-2xl font-light text-center dark:text-white"
             >
               Po wydrukowniu wytnij siatke wielościanu wzdłuż zewnętrznych
               krawędzi obrazu.
@@ -333,7 +356,7 @@
               złóż
             </p>
             <p
-              class="text-2xl font-opensans font-light text-center dark:text-white"
+              class="contentFontSettings text-2xl font-light text-center dark:text-white"
             >
               Wycięty obraz zegnij wzdłuż wewnętrznych krawędzi, tak aby siatka
               sama się składała w kształt przypominający kule
@@ -361,7 +384,7 @@
               sklej
             </p>
             <p
-              class="text-2xl font-opensans font-light text-center dark:text-white"
+              class="contentFontSettings text-2xl font-light text-center dark:text-white"
             >
               Nałóż klej na przeznaczone do tego elementy nie będące częscią
               wybranego wcześniej zdjęcia lub obrazu i przyłóż je do
@@ -409,7 +432,7 @@
             >
               łatwe
             </h5>
-            <p class="text-center text-gray-400 min-w-md">
+            <p class="contentFontSettings text-2xl text-center dark:text-white min-w-md">
               Łatwe do złożenia, każdy może sobie z tym poradzić bez względu na
               wiek i umiejętności.
             </p>
@@ -449,7 +472,7 @@
             >
               fajne
             </h5>
-            <p class="text-center text-gray-400 min-w-md">
+            <p class="contentFontSettings text-2xl text-center dark:text-white min-w-md">
               Samo składanie figury może sprawić wiele frajdy dla ciebie i
               twoich bliskich.
             </p>
@@ -489,7 +512,7 @@
             >
               ładne
             </h5>
-            <p class="text-center text-gray-400 min-w-md">
+            <p class="contentFontSettings text-center text-2xl dark:text-white min-w-md">
               Gotowe złożone zdjęcie można postawić w dowolnym miejsciu w domu
             </p>
           </div>

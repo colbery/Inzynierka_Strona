@@ -22,8 +22,8 @@ module.exports = {
     extend: {
       colors: {
         goldish: "#FFD600",
-        darkish: "#141414",
-        grayish: "#333333",
+        darkish: "#222222",
+        grayish: "#302c2c",
       },
       fontFamily: {
         sans: ["Staatliches", "sans-serif"],

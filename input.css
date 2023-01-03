@@ -8,6 +8,25 @@
   }
 }
 
+nav
+{
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 25px 22px -19px rgba(0, 0, 0, 0.25);
+}
+
+.fontSettings
+{
+  letter-spacing: 0.20rem;
+  line-height: 102%;
+}
+
+.contentFontSettings
+{
+  line-height: 130%;
+  font-weight: 300;
+  font-family: 'Open Sans'
+}
+
 .ficonW:hover {
   filter: invert(70%) sepia(41%) saturate(3139%) hue-rotate(360deg)
     brightness(102%) contrast(105%);
