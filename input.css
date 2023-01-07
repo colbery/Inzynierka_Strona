@@ -32,7 +32,7 @@ nav
     brightness(102%) contrast(105%);
 }
 
-.ficonH:hover {
+/* .ficonH:hover {
   filter: invert(30%) sepia(41%) saturate(3139%) hue-rotate(360deg)
     brightness(102%) contrast(105%);
-}
+} */
