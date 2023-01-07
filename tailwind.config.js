@@ -39,7 +39,7 @@ module.exports = {
         smileW: "url('../images/whitemode/smileW.png')",
         sunW: "url('../images/whitemode/sunW.png')",
 
-        bgD: "url('../images/darkmode/bgD.png')",
+        bgD: "url('../images/darkmode/bgD.webp')",
         globeD: "url('../images/darkmode/globeD.png')",
         heartD: "url('../images/darkmode/heartD.png')",
         likeD: "url('../images/darkmode/likeD.png')",

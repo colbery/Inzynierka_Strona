@@ -689,23 +689,7 @@ video {
   margin-bottom: 2rem;
 }
 
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
-.mx-16 {
-  margin-left: 4rem;
+.mr-16 {
   margin-right: 4rem;
 }
 
@@ -765,14 +749,6 @@ video {
   margin-top: 18rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
-}
-
-.mr-16 {
-  margin-right: 4rem;
-}
-
 .block {
   display: block;
 }
@@ -801,12 +777,12 @@ video {
   height: 5rem;
 }
 
-.h-1\/2 {
-  height: 50%;
-}
-
 .h-80 {
   height: 20rem;
+}
+
+.h-1\/2 {
+  height: 50%;
 }
 
 .w-2\/3 {
@@ -973,7 +949,11 @@ video {
 }
 
 .bg-bgD {
-  background-image: url('../images/darkmode/bgD.png');
+  background-image: url('../images/darkmode/bgD.webp');
+}
+
+.bg-contain {
+  background-size: contain;
 }
 
 .bg-center {
@@ -1009,14 +989,6 @@ video {
   padding: 1rem;
 }
 
-.p-20 {
-  padding: 5rem;
-}
-
-.p-12 {
-  padding: 3rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1045,11 +1017,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
 }
 
 .pb-12 {
@@ -1145,9 +1112,9 @@ video {
   color: rgb(255 214 0 / var(--tw-text-opacity));
 }
 
-.text-black {
+.text-darkish {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(34 34 34 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1160,9 +1127,9 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
-.text-darkish {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(34 34 34 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .transition {
@@ -1303,14 +1270,6 @@ nav
     z-index: 0;
   }
 
-  .md\:m-10 {
-    margin: 2.5rem;
-  }
-
-  .md\:mb-20 {
-    margin-bottom: 5rem;
-  }
-
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -1375,14 +1334,6 @@ nav
     padding-top: 0px;
   }
 
-  .md\:pt-7 {
-    padding-top: 1.75rem;
-  }
-
-  .md\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
   .md\:text-6xl {
     font-size: 60px;
   }
@@ -1395,20 +1346,20 @@ nav
     font-size: 20px;
   }
 
-  .md\:text-5xl {
-    font-size: 48px;
-  }
-
   .md\:text-2xl {
     font-size: 24px;
   }
 
-  .md\:text-\[8rem\] {
-    font-size: 8rem;
+  .md\:text-5xl {
+    font-size: 48px;
   }
 
   .md\:text-4xl {
     font-size: 36px;
+  }
+
+  .md\:text-\[8rem\] {
+    font-size: 8rem;
   }
 
   .dark .dark\:md\:block {
@@ -1417,10 +1368,6 @@ nav
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-48 {
-    width: 12rem;
-  }
-
   .lg\:w-44 {
     width: 11rem;
   }
