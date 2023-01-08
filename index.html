@@ -21,8 +21,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
@@ -31,23 +37,26 @@
 
     <script src="./js/dodecahedron.js"></script>
     <script src="./js/autoplayMP4.js"></script>
-
   </head>
-  <body class=" relative dark:bg-darkish scroll-behavior: smooth;" onload="startGL()">
+  <body
+    class="relative dark:bg-darkish scroll-behavior: smooth;"
+    onload="startGL()"
+  >
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-contain bg-center sm:bg-transparent pb-12">
-
+      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-contain bg-center sm:bg-transparent pb-12"
+    >
       <!-- conteinerhero -->
       <div class="md:w-2/3 mx-auto px-6 text-center">
         <button id="theme-toggle" class="mr-16" name="dark-mode">
           <img
             id="theme-toggle-dark-icon"
             src="./images/darkmode/sunD.svg"
-            class="absolute hidden right-7 transition top-7 ficonH hover:scale-110"
+            class="absolute hidden right-7 transition top-3 ficonH hover:scale-110"
             alt="darkmode"
           />
+
           <!-- <img
             id="theme-toggle-white-icon"
             src="./images/whitemode/sunW.svg"
@@ -55,14 +64,64 @@
             alt=""
           /> -->
         </button>
+        <button
+          id="menu-btn"
+          class="z-30 block md:hidden focus outline-none hamburger"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+
+        <div
+          id="menu"
+          class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest transition text-white uppercase divide-y divide-gray-500 opacity-95 bg-darkish"
+        >
+          <div class="w-full py-3 text-center">
+            <a
+              href="#features"
+              class="block hover:text-goldish transition uppercase hover:scale-x-105 text-xl"
+              >O nas
+            </a>
+          </div>
+          <div class="w-full py-3 text-center">
+            <a
+              href="#download"
+              class="block hover:text-goldish uppercase transition hover:scale-x-105 text-xl"
+              >instrukcja</a
+            >
+          </div>
+          <div class="w-full py-3 text-center">
+            <a
+              href="#walksee"
+              class="block hover:text-goldish uppercase transition hover:scale-x-105 text-xl"
+              >zdjecia 360</a
+            >
+          </div>
+          <div class="w-full py-3 text-center">
+            <a
+              href="#"
+              class="block hover:text-goldish uppercase transition hover:scale-x-105 text-xl"
+              >Sprawdź to
+            </a>
+          </div>
+        </div>
 
         <div class="md:pt-0 dark:text-white">
-          <p class="fontSettings text-3xl pt-20 md:pt-0 uppercase tracking-thewidest md:text-6xl">
-            WYDRUKUJ SWOJE<br>
+          <p
+            class="fontSettings text-3xl pt-20 md:pt-0 uppercase tracking-thewidest md:text-6xl"
+          >
+            WYDRUKUJ SWOJE<br />
             ZDJĘCIE <span class="text-goldish">360°</span>
+          </p>
         </div>
+
         <div class="mx-auto">
-          <canvas id="canvas-hero" class="left-0 md:z-0 mx-auto mt-16 mb-16 md:w-1/2" height="300"></canvas>
+          <canvas
+            id="canvas-hero"
+            class="left-0 md:z-0 mx-auto mt-16 mb-16 md:w-1/2"
+            height="300"
+          ></canvas>
         </div>
 
         <!-- <img
@@ -76,14 +135,16 @@
           teraz tylko za <span class="text-goldish">1 zł</span>
         </p>
         <button
-        name="print"
+          name="print"
           class="block md:mb-12 -bottom-4 right-5 p-3 transition rounded-md w-52 lg:w-44 xl:w-52 bg-goldish hover:scale-95 mb-5 mx-auto md:fixed z-50"
         >
           <p class="text-3xl uppercase text-darkish">drukuj</p>
         </button>
       </div>
     </section>
-    <nav class="dark:text-white sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-grayish">
+    <nav
+      class="dark:text-white sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-grayish"
+    >
       <!-- flex container for nav items -->
       <!-- <div class="w-full uppercase h-16 md:text-3xl text-2xl">
         <div class="w-2/3 mx-auto">
@@ -102,45 +163,87 @@
         </div>
       </div> -->
       <div class="w-2/3 mx-auto mb-20">
-        <div class=" flex flex-row left-0 h-16 w-full items-center justify-around space-x-10 uppercase md:text-xl md:space-x-12 xl:space-x-16 xl:text-2xl">
-          <a href="#consist" class="traciking-widest transition-colors duration-300 hover:text-goldish">o nas</a>
-          <a href="#instruction" class="traciking-widest transition-colors duration-300 hover:text-goldish">instrukcja</a>
-          <a href="#walksee" class="traciking-widest transition-colors duration-300 hover:text-goldish">zdjecia 360</a>
-          <a href="#print" class="traciking-widest transition-colors duration-300 hover:text-goldish ">sprawdź to</a>
+        <div
+          class="flex flex-row left-0 h-16 w-full items-center justify-around space-x-10 uppercase md:text-xl md:space-x-12 xl:space-x-16 xl:text-2xl"
+        >
+          <a
+            href="#features"
+            class="traciking-widest transition-colors duration-300 hover:text-goldish"
+            >o nas</a
+          >
+          <a
+            href="#download"
+            class="traciking-widest transition-colors duration-300 hover:text-goldish"
+            >instrukcja</a
+          >
+          <a
+            href="#walksee"
+            class="traciking-widest transition-colors duration-300 hover:text-goldish"
+            >zdjecia 360</a
+          >
+          <a
+            href="#"
+            class="traciking-widest transition-colors duration-300 hover:text-goldish"
+            >sprawdź to</a
+          >
         </div>
       </div>
     </nav>
     <section id="consist" class="mb-40">
       <div class="w-2/3 text-center mx-auto pt-10">
         <div class="-space-y-5 my-10 dark:text-white">
-          <p class="fontSettings text-5xl md:text-6xl pt-5 uppercase tracking-thewidest dark:text-white">
+          <p
+            class="fontSettings text-5xl md:text-6xl pt-5 uppercase tracking-thewidest dark:text-white"
+          >
             Na czym to
           </p>
-          <p class="fontSettings text-5xl md:text-6xl pt-5 uppercase tracking-thewidest">polega</p>
+          <p
+            class="fontSettings text-5xl md:text-6xl pt-5 uppercase tracking-thewidest"
+          >
+            polega
+          </p>
         </div>
         <p
           class="contentFontSettings text-xl md:text-2xl dark:text-white pt-10 mb-10"
         >
           Wgraj swoje <span class="text-goldish">zdjęcie sferyczne</span> i
-          wydrukuj w postaci siatki wielościanu, która po wycięciu i złożeniu stworzy
-          trójwymiarowy obraz twojego zdjęcia.
+          wydrukuj w postaci siatki wielościanu, która po wycięciu i złożeniu
+          stworzy trójwymiarowy obraz twojego zdjęcia.
         </p>
-        <img src="./images/img/gif.png" class="w-full mb-10" alt="składanie bryły" />
-        <div class="flex flex-row justify-between	">
+        <img
+          src="./images/img/gif.png"
+          class="w-full mb-10"
+          alt="składanie bryły"
+        />
+        <div class="flex flex-row justify-between">
           <!-- <img src="./images/img/3xdode.png" class="w-full mb-5" alt="" /> -->
-          <canvas id="canvas-left" class="canvas-left w-1/3" height="300" style="border: solid white 1px">
+          <canvas
+            id="canvas-left"
+            class="canvas-left w-1/3"
+            height="300"
+            style="border: solid white 1px"
+          >
             <!-- <script> startGL(canvas_left); </script> -->
           </canvas>
 
-          <canvas id="canvas-middle" class="canvas-left w-1/3" height="300"  style="border: solid white 1px">
+          <canvas
+            id="canvas-middle"
+            class="canvas-left w-1/3"
+            height="300"
+            style="border: solid white 1px"
+          >
             <!-- <script> startGL(canvas_left); </script> -->
           </canvas>
 
-          <canvas id="canvas-right" class="w-1/3" height="300"  style="border: solid white 1px">
+          <canvas
+            id="canvas-right"
+            class="w-1/3"
+            height="300"
+            style="border: solid white 1px"
+          >
             <!-- <script> startGL(canvas_right); </script> -->
           </canvas>
         </div>
-
       </div>
       <!-- <div class="w-full">
         <div
@@ -235,69 +338,248 @@
           </button>
         </div>
       </div>-->
-    </section> 
+    </section>
     <section id="instruction">
       <div class="text-center mx-auto w-2/3 pt-20 dark:text-white">
         <p class="text-5xl uppercase tracking-wider md:text-6xl">Instrukcja</p>
-        <div class="text-center pt-20 ">
-          <p class="fontSettings text-4xl uppercase my-8 mb-20 md:mb-12 md:text-5xl">
+        <div class="text-center pt-20">
+          <p
+            class="fontSettings text-4xl uppercase my-8 mb-20 md:mb-12 md:text-5xl"
+          >
             potrzebne przyrządy
+          </p>
         </div>
-        <div class="flex flex-col flex-wrap xl:flex-nowrap sm:flex-row items-center mt-10 object-scale-down">
-          
-          <div class="md:w-1/3 flex flex-col px-1 mx-auto justify-center items-center text-center align-middle ">
-          
+
+        <div
+          class="flex flex-col flex-wrap xl:flex-nowrap sm:flex-row items-center mt-10 object-scale-down"
+        >
+          <div
+            class="md:w-1/3 flex flex-col px-1 mx-auto justify-center items-center text-center align-middle"
+          >
             <p class="text-4xl text-goldish uppercase pb-10">kartka</p>
-            <svg width="220" height="220" xmlns="http://www.w3.org/2000/svg" class="mb-20 md:mb-0" preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 256 256">
+            <svg
+              width="220"
+              height="220"
+              xmlns="http://www.w3.org/2000/svg"
+              class="mb-20 md:mb-0"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 256 256"
+            >
               <title>Document</title>
-             
+
               <g>
-               <title>Layer 1</title>
-               <path stroke="currentColor" id="svg_1" stroke-width="10" stroke-linejoin="round" fill="none" d="m210.00001,108.38605l0,110.48317a22.05,27.23077 0 0 1 -22.05,27.23077l-102.9,0a22.05,27.23077 0 0 1 -22.05,-27.23077l0,-181.53845a22.05,27.23077 0 0 1 22.05,-27.23077l45.36328,0a14.7,18.15385 0 0 1 10.39106,5.31567l64.89131,80.13788a14.7,18.15385 0 0 1 4.30434,12.8325z"/>
-               <path stroke="currentColor" id="svg_2" class="mt-10" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none" d="m130.29794,17l0,60a16,16 0 0 0 16,18l60,0"/>
+                <title>Layer 1</title>
+                <path
+                  stroke="currentColor"
+                  id="svg_1"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  fill="none"
+                  d="m210.00001,108.38605l0,110.48317a22.05,27.23077 0 0 1 -22.05,27.23077l-102.9,0a22.05,27.23077 0 0 1 -22.05,-27.23077l0,-181.53845a22.05,27.23077 0 0 1 22.05,-27.23077l45.36328,0a14.7,18.15385 0 0 1 10.39106,5.31567l64.89131,80.13788a14.7,18.15385 0 0 1 4.30434,12.8325z"
+                />
+                <path
+                  stroke="currentColor"
+                  id="svg_2"
+                  class="mt-10"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  fill="none"
+                  d="m130.29794,17l0,60a16,16 0 0 0 16,18l60,0"
+                />
               </g>
-             </svg>
+            </svg>
           </div>
 
           <div
-          class="md:w-1/3 flex flex-col px-1 mx-auto justify-center items-center text-center align-middle"
-        >
-          <p class="text-4xl text-goldish uppercase px-10 pb-10">nożyczki</p>
-          <svg width="220" height="220" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="mb-20 md:mb-0" preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 256 256">
+            class="md:w-1/3 flex flex-col px-1 mx-auto justify-center items-center text-center align-middle"
+          >
+            <p class="text-4xl text-goldish uppercase px-10 pb-10">nożyczki</p>
+            <svg
+              width="220"
+              height="220"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+              class="mb-20 md:mb-0"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 256 256"
+            >
+              <g>
+                <title>Layer 1</title>
+                <rect id="svg_1" fill="none" height="256" width="256" />
+                <circle
+                  id="svg_2"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke="#FFF"
+                  fill="none"
+                  r="28"
+                  cy="218"
+                  cx="172"
+                />
+                <circle
+                  id="svg_3"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke="#FFF"
+                  fill="none"
+                  r="28"
+                  cy="218"
+                  cx="79"
+                />
+                <line
+                  transform="rotate(100 140.55 151.6)"
+                  stroke="#FFF"
+                  id="svg_4"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  fill="none"
+                  y2="173.6095"
+                  x2="109.20452"
+                  y1="129.59053"
+                  x1="171.89551"
+                />
+                <line
+                  transform="rotate(79.8723 129 96.75)"
+                  stroke="#FFF"
+                  id="svg_5"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  fill="none"
+                  y2="40.98312"
+                  x2="50.33127"
+                  y1="152.51689"
+                  x1="207.66871"
+                />
+                <path
+                  transform="rotate(100 92 47.05)"
+                  stroke="#FFF"
+                  id="svg_6"
+                  d="m124.90713,23.80945l-65.81426,46.48112"
+                  opacity="undefined"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="10"
+                  fill="none"
+                />
+              </g>
+            </svg>
+          </div>
 
-            <g>
-             <title>Layer 1</title>
-             <rect id="svg_1" fill="none" height="256" width="256"/>
-             <circle id="svg_2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" stroke="#FFF" fill="none" r="28" cy="218" cx="172"/>
-             <circle id="svg_3" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" stroke="#FFF" fill="none" r="28" cy="218" cx="79"/>
-             <line transform="rotate(100 140.55 151.6)" stroke="#FFF" id="svg_4" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none" y2="173.6095" x2="109.20452" y1="129.59053" x1="171.89551"/>
-             <line transform="rotate(79.8723 129 96.75)" stroke="#FFF" id="svg_5" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none" y2="40.98312" x2="50.33127" y1="152.51689" x1="207.66871"/>
-             <path transform="rotate(100 92 47.05)" stroke="#FFF" id="svg_6" d="m124.90713,23.80945l-65.81426,46.48112" opacity="undefined" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" fill="none"/>
-            </g>
-           </svg>
-
-        </div>
-
-          <div class="md:w-1/3 flex flex-col md:flex-col px-1 mx-auto justify-center items-center text-center align-middle  ">
-          <p class="text-4xl text-goldish uppercase pb-10">klej</p>
-          <svg width="220" height="220" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="mb-20 md:mb-0" preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 256 256">
-
-            <g>
-             <title>Layer 1</title>
-             <path id="svg_1" d="m0,0l256,0l0,256l-256,0l0,-256z" opacity="undefined" fill="none"/>
-             <path id="svg_2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" stroke="#FFF" fill="none" d="m216,96.6"/>
-             <path id="svg_3" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" stroke="#FFF" fill="none" d="m185.1,104.9"/>
-             <rect rx="10" id="svg_5" height="240" width="113" y="8" x="71.5" stroke-width="10" stroke="#FFF" fill="none"/>
-             <line stroke="#FFF" id="svg_18" y2="247.42308" x2="189.5" y1="247.42308" x1="66.50001" stroke-width="10" fill="none"/>
-             <line stroke="#FFF" id="svg_19" y2="185.5" x2="182.49999" y1="184.5" x1="69.5" stroke-width="10" fill="none"/>
-             <line id="svg_20" y2="229.5" x2="96.5" y1="200.5" x1="96.5" stroke-width="10" stroke="#FFF" fill="none"/>
-             <line id="svg_21" y2="229.5" x2="128" y1="200.5" x1="128" stroke-width="10" stroke="#FFF" fill="none"/>
-             <path id="svg_22" d="m158.80769,200.73077l0,29" opacity="undefined" stroke-width="10" stroke="#FFF" fill="none"/>
-             <line stroke="#FFF" id="svg_23" y2="67.72219" x2="188.26189" y1="66.72219" x1="69.2619" stroke-width="10" fill="none"/></g>
-           </svg>
+          <div
+            class="md:w-1/3 flex flex-col md:flex-col px-1 mx-auto justify-center items-center text-center align-middle"
+          >
+            <p class="text-4xl text-goldish uppercase pb-10">klej</p>
+            <svg
+              width="220"
+              height="220"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+              class="mb-20 md:mb-0"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 256 256"
+            >
+              <g>
+                <title>Layer 1</title>
+                <path
+                  id="svg_1"
+                  d="m0,0l256,0l0,256l-256,0l0,-256z"
+                  opacity="undefined"
+                  fill="none"
+                />
+                <path
+                  id="svg_2"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke="#FFF"
+                  fill="none"
+                  d="m216,96.6"
+                />
+                <path
+                  id="svg_3"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke="#FFF"
+                  fill="none"
+                  d="m185.1,104.9"
+                />
+                <rect
+                  rx="10"
+                  id="svg_5"
+                  height="240"
+                  width="113"
+                  y="8"
+                  x="71.5"
+                  stroke-width="10"
+                  stroke="#FFF"
+                  fill="none"
+                />
+                <line
+                  stroke="#FFF"
+                  id="svg_18"
+                  y2="247.42308"
+                  x2="189.5"
+                  y1="247.42308"
+                  x1="66.50001"
+                  stroke-width="10"
+                  fill="none"
+                />
+                <line
+                  stroke="#FFF"
+                  id="svg_19"
+                  y2="185.5"
+                  x2="182.49999"
+                  y1="184.5"
+                  x1="69.5"
+                  stroke-width="10"
+                  fill="none"
+                />
+                <line
+                  id="svg_20"
+                  y2="229.5"
+                  x2="96.5"
+                  y1="200.5"
+                  x1="96.5"
+                  stroke-width="10"
+                  stroke="#FFF"
+                  fill="none"
+                />
+                <line
+                  id="svg_21"
+                  y2="229.5"
+                  x2="128"
+                  y1="200.5"
+                  x1="128"
+                  stroke-width="10"
+                  stroke="#FFF"
+                  fill="none"
+                />
+                <path
+                  id="svg_22"
+                  d="m158.80769,200.73077l0,29"
+                  opacity="undefined"
+                  stroke-width="10"
+                  stroke="#FFF"
+                  fill="none"
+                />
+                <line
+                  stroke="#FFF"
+                  id="svg_23"
+                  y2="67.72219"
+                  x2="188.26189"
+                  y1="66.72219"
+                  x1="69.2619"
+                  stroke-width="10"
+                  fill="none"
+                />
+              </g>
+            </svg>
           </div>
 
           <div
@@ -305,41 +587,102 @@
           >
             <p class="text-4xl text-goldish uppercase pb-10">drukarka</p>
 
-            <svg width="220" height="220" xmlns="http://www.w3.org/2000/svg" class="mb-20 md:mb-0 " preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 256 256">
+            <svg
+              width="220"
+              height="220"
+              xmlns="http://www.w3.org/2000/svg"
+              class="mb-20 md:mb-0"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 256 256"
+            >
               <title>Print</title>
               <g>
-               <title>Layer 1</title>
-               <path stroke="currentColor" id="svg_1" stroke-width="10" stroke-linejoin="round" fill="none" d="m175,160l8.8125,0a14.73156,16.048 0 0 0 14.6875,-16l0,-64a14.73156,16.048 0 0 0 -14.6875,-16l-111.625,0a14.73156,16.048 0 0 0 -14.6875,16l0,64a14.73156,16.048 0 0 0 14.6875,16l8.8125,0"/>
-               <rect stroke="currentColor" rx="5" id="svg_6" height="53" width="86" y="10.5" x="85" stroke-width="10" fill="none"/>
-               <rect rx="5" id="svg_5" height="105" width="86" y="134.5" x="85" stroke-width="10" stroke="currentColor" fill="none"/>
-               <line id="svg_7" y2="162.5" x2="146.5" y1="162.5" x1="101.5" stroke-width="10" stroke="currentColor" fill="none"/>
-               <line id="svg_8" y2="184.5" x2="129.5" y1="184.5" x1="102.5" stroke-width="10" stroke="currentColor" fill="none"/>
-               <ellipse ry="9" rx="8.5" id="svg_9" cy="88.5" cx="173" stroke="currentColor" fill="currentColor" />
+                <title>Layer 1</title>
+                <path
+                  stroke="currentColor"
+                  id="svg_1"
+                  stroke-width="10"
+                  stroke-linejoin="round"
+                  fill="none"
+                  d="m175,160l8.8125,0a14.73156,16.048 0 0 0 14.6875,-16l0,-64a14.73156,16.048 0 0 0 -14.6875,-16l-111.625,0a14.73156,16.048 0 0 0 -14.6875,16l0,64a14.73156,16.048 0 0 0 14.6875,16l8.8125,0"
+                />
+                <rect
+                  stroke="currentColor"
+                  rx="5"
+                  id="svg_6"
+                  height="53"
+                  width="86"
+                  y="10.5"
+                  x="85"
+                  stroke-width="10"
+                  fill="none"
+                />
+                <rect
+                  rx="5"
+                  id="svg_5"
+                  height="105"
+                  width="86"
+                  y="134.5"
+                  x="85"
+                  stroke-width="10"
+                  stroke="currentColor"
+                  fill="none"
+                />
+                <line
+                  id="svg_7"
+                  y2="162.5"
+                  x2="146.5"
+                  y1="162.5"
+                  x1="101.5"
+                  stroke-width="10"
+                  stroke="currentColor"
+                  fill="none"
+                />
+                <line
+                  id="svg_8"
+                  y2="184.5"
+                  x2="129.5"
+                  y1="184.5"
+                  x1="102.5"
+                  stroke-width="10"
+                  stroke="currentColor"
+                  fill="none"
+                />
+                <ellipse
+                  ry="9"
+                  rx="8.5"
+                  id="svg_9"
+                  cy="88.5"
+                  cx="173"
+                  stroke="currentColor"
+                  fill="currentColor"
+                />
               </g>
-             </svg>        
-            </div>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="overflow-x-hidden">
+    <section id="download" class="overflow-x-hidden">
       <div class="text-center mx-auto w-2/3 pt-20">
-        <p class="fontSettings text-4xl md:text-5xl uppercase my-8 md:mt-20 md:mb-12 dark:text-white">jak to zrobić</p>
+        <p
+          class="fontSettings text-4xl md:text-5xl uppercase my-8 md:mt-20 md:mb-12 dark:text-white"
+        >
+          jak to zrobić
+        </p>
 
         <div class="py-10 flex flex-col-reverse md:flex-row mx-auto">
           <div class="md:w-1/2 flex justify-end">
-
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/4.mp4" type="video/mp4">
-              <source src="movie.ogg" type="video/ogg">
+              <source src="./videos/4.mp4" type="video/mp4" />
+              <source src="movie.ogg" type="video/ogg" />
               Your browser does not support the video tag.
             </video>
-
           </div>
           <div class="md:w-1/2 p-5 pt-10 relative z-0">
             <p
-              class=" text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
             >
               wydrukuj
             </p>
@@ -347,7 +690,9 @@
               class="contentFontSettings text-2xl font-light text-center dark:text-white order-1"
             >
               Pobierz gotową siatkę bryły ze swoim obrazem i wydrukuj w wybrany
-              przez ciebie sposób! Najlepiej na <span class="text-goldish">kartce </span> A4 z <span class="text-goldish">bloku technicznego</span>.
+              przez ciebie sposób! Najlepiej na
+              <span class="text-goldish">kartce </span> A4 z
+              <span class="text-goldish">bloku technicznego</span>.
             </p>
             <!-- <img
               id="printerW"
@@ -367,7 +712,7 @@
         <div class="py-10 flex flex-col md:flex-row">
           <div class="md:w-1/2 p-5 pt-10 justify-start relative z-0">
             <p
-            class=" text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
             >
               wytnij
             </p>
@@ -392,7 +737,7 @@
           </div>
           <div class="md:w-1/2 flex justify-end">
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/1.mp4" type="video/mp4">
+              <source src="./videos/1.mp4" type="video/mp4" />
               <!-- <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
             </video>
@@ -402,14 +747,14 @@
         <div class="py-10 flex flex-col-reverse md:flex-row mx-auto">
           <div class="md:w-1/2 flex justify-end">
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/2.mp4" type="video/mp4">
+              <source src="./videos/2.mp4" type="video/mp4" />
               <!-- <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
             </video>
           </div>
           <div class="md:w-1/2 p-5 pt-10 relative z-0">
             <p
-            class=" text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
             >
               zegnij
             </p>
@@ -437,7 +782,7 @@
         <div class="py-10 flex flex-col md:flex-row">
           <div class="md:w-1/2 p-5 pt-10 justify-start">
             <p
-            class=" text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
             >
               sklej
             </p>
@@ -450,7 +795,7 @@
           </div>
           <div class="md:w-1/2 flex justify-end">
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/3.mp4" type="video/mp4">
+              <source src="./videos/3.mp4" type="video/mp4" />
               <!-- <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
             </video>
@@ -460,19 +805,20 @@
         <div class="py-10 flex flex-col md:flex-row-reverse">
           <div class="md:w-1/2 p-5 pt-10 justify-start">
             <p
-            class=" text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
             >
               złóż
             </p>
             <p
               class="contentFontSettings text-2xl font-light text-center dark:text-white"
             >
-              Złóż siatke w dziesięciościan foremny przykladajać klejone wcześniej elementy do wewnętrznych częsci bryły.
+              Złóż siatke w dziesięciościan foremny przykladajać klejone
+              wcześniej elementy do wewnętrznych częsci bryły.
             </p>
           </div>
           <div class="md:w-1/2 flex justify-end">
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/4.mp4" type="video/mp4">
+              <source src="./videos/4.mp4" type="video/mp4" />
               <!-- <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
             </video>
@@ -496,7 +842,7 @@
               alt="icon like"
               width="135"
               height="140"
-              class="mx-auto ficonW hidden "
+              class="mx-auto ficonW hidden"
             />
             <img
               id="likeD"
@@ -504,7 +850,7 @@
               alt="icon like"
               width="135"
               height="140"
-              class="mx-auto ficonH hidden "
+              class="mx-auto ficonH hidden"
             />
 
             <h5
@@ -512,7 +858,9 @@
             >
               łatwe
             </h5>
-            <p class="contentFontSettings text-2xl text-center dark:text-white min-w-md">
+            <p
+              class="contentFontSettings text-2xl text-center dark:text-white min-w-md"
+            >
               Łatwe do złożenia, każdy może sobie z tym poradzić bez względu na
               wiek i umiejętności.
             </p>
@@ -527,8 +875,7 @@
               <!-- zdjdecie konterner bg  -->
               <div
                 class="flex items-center justify-center w-20 h-20 p-4 rounded-full"
-              >
-              </div>
+              ></div>
             </div>
             <img
               id="smileW"
@@ -536,7 +883,7 @@
               alt=" icon smile"
               width="135"
               height="140"
-              class="mx-auto ficonW hidden "
+              class="mx-auto ficonW hidden"
             />
             <img
               id="smileD"
@@ -544,14 +891,16 @@
               alt="icon smile"
               width="135"
               height="140"
-              class="mx-auto ficonH hidden "
+              class="mx-auto ficonH hidden"
             />
             <h5
               class="text-3xl font-bold text-center uppercase text-yellow-500 tracking-thewidest"
             >
               fajne
             </h5>
-            <p class="contentFontSettings text-2xl text-center dark:text-white min-w-md">
+            <p
+              class="contentFontSettings text-2xl text-center dark:text-white min-w-md"
+            >
               Samo składanie figury może sprawić wiele frajdy dla ciebie i
               twoich bliskich.
             </p>
@@ -574,7 +923,7 @@
               alt="icon eye"
               width="135"
               height="140"
-              class="mx-auto ficonW hidden "
+              class="mx-auto ficonW hidden"
             />
 
             <img
@@ -583,7 +932,7 @@
               alt="icon eye"
               width="135"
               height="140"
-              class="mx-auto ficonH hidden "
+              class="mx-auto ficonH hidden"
             />
 
             <h5
@@ -591,7 +940,9 @@
             >
               ładne
             </h5>
-            <p class="contentFontSettings text-center text-2xl dark:text-white min-w-md">
+            <p
+              class="contentFontSettings text-center text-2xl dark:text-white min-w-md"
+            >
               Gotowe złożone zdjęcie można postawić w dowolnym miejsciu w domu
             </p>
           </div>
@@ -608,15 +959,25 @@
         </p>
         <a href="https://walksee.pl">
           <div class="flex">
-            <div class="bg-goldish rounded-xl w-full flex flex-col md:flex-row text-center justify-center pt-12">
-              <div class="w-1/2 hidden md:visible md:flex md:flex-col justify-between">
+            <div
+              class="bg-goldish rounded-xl w-full flex flex-col md:flex-row text-center justify-center pt-12"
+            >
+              <div
+                class="w-1/2 hidden md:visible md:flex md:flex-col justify-between"
+              >
                 <div class="py-5">
-                  <p class="fontSettings max-w-sm text-darkish mx-auto tracking-thewidest font-sans text-3xl">
+                  <p
+                    class="fontSettings max-w-sm text-darkish mx-auto tracking-thewidest font-sans text-3xl"
+                  >
                     Zrob idealne zdjecie sferyczne swoim telefonem
                   </p>
                 </div>
                 <div>
-                  <img src="./images/img/hand.webp" class="h-80 xl:mx-16" alt="walksee phone" />
+                  <img
+                    src="./images/img/hand.webp"
+                    class="h-80 xl:mx-16"
+                    alt="walksee phone"
+                  />
                 </div>
               </div>
               <div class="w-1/2 mx-auto flex flex-col justify-between">
@@ -636,8 +997,8 @@
                   <p
                     class="fontSettings max-w-sm text-darkish md:text-2xl mx-auto tracking-thewidest font-sans"
                   >
-                    walksee jest aplikacją do rejestracji zdjęc 360 oraz tworzenia
-                    spacerow wirtualnych po nieruchomosciach
+                    walksee jest aplikacją do rejestracji zdjęc 360 oraz
+                    tworzenia spacerow wirtualnych po nieruchomosciach
                   </p>
                   <p
                     class="max-w-sm text-black md:text-4xl mx-auto py-5 tracking-thewidest font-sans"
@@ -646,9 +1007,9 @@
                   </p>
                 </div>
               </div>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
       </div>
     </section>
 
@@ -656,7 +1017,7 @@
       <div class="w-2/3 mx-auto">
         <div class="my-10 mt-72">
           <button
-          name="print"
+            name="print"
             class="fontSettings border-goldish border transition rounded-2xl w-full dark:text-white md:text-[8rem] text-[2rem] font-sans py-10 hover:scale-95"
           >
             Sprawdź to
