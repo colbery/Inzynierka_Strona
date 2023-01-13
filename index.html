@@ -17,7 +17,7 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/nav.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,36 +75,30 @@
 
         <div
           id="menu"
-          class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest transition text-white uppercase divide-y divide-gray-500 opacity-95 bg-darkish"
-        >
-          <div class="w-full py-3 text-center">
-            <a
-              href="#about-us"
-              class="block hover:text-goldish transition uppercase hover:scale-x-105 text-xl"
-              >O nas
-            </a>
-          </div>
-          <div class="w-full py-3 text-center">
-            <a
-              href="#instruction"
-              class="block hover:text-goldish uppercase transition hover:scale-x-105 text-xl"
-              >instrukcja</a
-            >
-          </div>
-          <div class="w-full py-3 text-center">
-            <a
-              href="#walksee"
-              class="block hover:text-goldish uppercase transition hover:scale-x-105 text-xl"
-              >zdjecia 360</a
-            >
-          </div>
-          <div class="w-full py-3 text-center">
-            <a
-              href="#"
-              class="block hover:text-goldish uppercase transition hover:scale-x-105 text-xl"
-              >Sprawdź to
-            </a>
-          </div>
+          class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest transition text-white uppercase divide-y divide-gray-500 opacity-95 bg-darkish">
+          <a href="#about-us" class="fontSettings block hover:text-goldish transition uppercase hover:scale-x-105 text-2xl w-full">
+            <div class="w-full py-12 text-center">
+              O nas
+            </div>
+          </a>
+
+          <a href="#instruction"class="fontSettings block hover:text-goldish uppercase transition hover:scale-x-105 text-2xl w-full">
+            <div class="w-full py-12 text-center">
+              instrukcja
+            </div>
+          </a>
+          
+          <a href="#walksee" class="fontSettings block hover:text-goldish uppercase transition hover:scale-x-105 text-2xl w-full">
+            <div class="w-full py-12 text-center">
+              zdjecia 360
+            </div>
+          </a>
+
+          <a href="#" class="fontSettings block hover:text-goldish uppercase transition hover:scale-x-105 text-2xl w-full">
+            <div class="w-full py-12 text-center">
+              Sprawdź to
+            </div>
+          </a>
         </div>
 
         <div class="md:pt-0 dark:text-white">
