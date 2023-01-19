@@ -17,9 +17,9 @@ nav {
 
 #bg-dode
 {
-  background-image: url('/images/img/bg-dode.webp');
+  background-image: url('/images/textures/texture.webp');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
 }
 

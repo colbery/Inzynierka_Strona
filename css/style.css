@@ -717,6 +717,11 @@ video {
   margin-bottom: 9rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mr-16 {
   margin-right: 4rem;
 }
@@ -747,6 +752,10 @@ video {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
 }
 
 .mt-20 {
@@ -781,16 +790,20 @@ video {
   margin-top: 18rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -833,8 +846,8 @@ video {
   width: 100%;
 }
 
-.w-52 {
-  width: 13rem;
+.w-32 {
+  width: 8rem;
 }
 
 .w-2\/3 {
@@ -853,12 +866,29 @@ video {
   width: 50%;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
 
 .basis-1\/2 {
   flex-basis: 50%;
+}
+
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -972,16 +1002,16 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .border {
   border-width: 1px;
 }
 
 .border-0 {
   border-width: 0px;
-}
-
-.border-b-4 {
-  border-bottom-width: 4px;
 }
 
 .border-b-2 {
@@ -1012,6 +1042,11 @@ video {
   background-color: rgb(255 214 0 / var(--tw-bg-opacity));
 }
 
+.bg-blackish {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 27 27 / var(--tw-bg-opacity));
+}
+
 .bg-bgD {
   background-image: url('../images/darkmode/bgD.webp');
 }
@@ -1033,8 +1068,8 @@ video {
      object-fit: contain;
 }
 
-.p-3 {
-  padding: 0.75rem;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-0 {
@@ -1053,6 +1088,14 @@ video {
   padding: 1rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1063,9 +1106,14 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .px-1 {
@@ -1083,14 +1131,9 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-16 {
@@ -1098,9 +1141,9 @@ video {
   padding-bottom: 4rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .pb-12 {
@@ -1131,10 +1174,6 @@ video {
   padding-top: 2.5rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .pt-28 {
   padding-top: 7rem;
 }
@@ -1151,16 +1190,12 @@ video {
   padding-top: 3rem;
 }
 
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
 }
 
 .text-center {
@@ -1175,8 +1210,8 @@ video {
   font-family: Staatliches, sans-serif;
 }
 
-.text-xl {
-  font-size: 20px;
+.text-2xl {
+  font-size: 24px;
 }
 
 .text-3xl {
@@ -1187,12 +1222,8 @@ video {
   font-size: 36px;
 }
 
-.text-2xl {
-  font-size: 24px;
-}
-
-.text-5xl {
-  font-size: 48px;
+.text-xl {
+  font-size: 20px;
 }
 
 .text-\[2rem\] {
@@ -1232,11 +1263,6 @@ video {
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
-}
-
-.text-grayish {
-  --tw-text-opacity: 1;
-  color: rgb(48 44 44 / var(--tw-text-opacity));
 }
 
 .text-\[\#01c7e4\] {
@@ -1286,9 +1312,9 @@ nav {
 
 #bg-dode
 {
-  background-image: url('/images/img/bg-dode.webp');
+  background-image: url('/images/textures/texture.webp');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* #instruction
@@ -1471,6 +1497,10 @@ nav {
     left: 4rem;
   }
 
+  .md\:top-7 {
+    top: 1.75rem;
+  }
+
   .md\:z-0 {
     z-index: 0;
   }
@@ -1479,12 +1509,16 @@ nav {
     margin-bottom: 3rem;
   }
 
-  .md\:mb-0 {
-    margin-bottom: 0px;
+  .md\:mt-16 {
+    margin-top: 4rem;
   }
 
-  .md\:mt-12 {
-    margin-top: 3rem;
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:mt-20 {
@@ -1493,6 +1527,10 @@ nav {
 
   .md\:mt-40 {
     margin-top: 10rem;
+  }
+
+  .md\:mt-12 {
+    margin-top: 3rem;
   }
 
   .md\:block {
@@ -1519,6 +1557,15 @@ nav {
     width: 33.333333%;
   }
 
+  .md\:w-32 {
+    width: 8rem;
+  }
+
+  .md\:rotate-0 {
+    --tw-rotate: 0deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1541,8 +1588,13 @@ nav {
     margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:border-b-0 {
-    border-bottom-width: 0px;
+  .md\:p-1 {
+    padding: 0.25rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:py-5 {
@@ -1556,6 +1608,10 @@ nav {
 
   .md\:pb-4 {
     padding-bottom: 1rem;
+  }
+
+  .md\:pb-5 {
+    padding-bottom: 1.25rem;
   }
 
   .md\:text-6xl {
@@ -1610,6 +1666,10 @@ nav {
     margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:p-2 {
+    padding: 0.5rem;
+  }
+
   .lg\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -1628,6 +1688,10 @@ nav {
 }
 
 @media (min-width: 1280px) {
+  .xl\:ml-12 {
+    margin-left: 3rem;
+  }
+
   .xl\:mt-auto {
     margin-top: auto;
   }
@@ -1650,8 +1714,16 @@ nav {
     margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .xl\:p-3 {
+    padding: 0.75rem;
+  }
+
   .xl\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .xl\:pt-0 {
+    padding-top: 0px;
   }
 
   .xl\:text-3xl {
@@ -1663,6 +1735,24 @@ nav {
   }
 
   .xl\:text-\[8rem\] {
+    font-size: 8rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 60px;
+  }
+
+  .xl\:text-\[7rem\] {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:text-2xl {
+    font-size: 24px;
+  }
+
+  .\32xl\:text-\[8rem\] {
     font-size: 8rem;
   }
 }

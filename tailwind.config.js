@@ -22,15 +22,19 @@ module.exports = {
     extend: {
       colors: {
         goldish: "#FFD600",
+        // goldish: "#01c7e4",
         darkish: "#222222",
         grayish: "#302c2c",
+        midGray: "#666",
+        whitish: "#ddd",
+        blackish: "#1b1b1b",
       },
       fontFamily: {
         sans: ["Staatliches", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        bgW: "url('../images/whitemode/bgW.png')",
+        bgW: "url('../images/img/net.png')",
         globeW: "url('../images/whitemode/globeW.png')",
         heartW: "url('../images/whitemode/heartW.png')",
         likeW: "url('../images/whitemode/likeW.png')",
