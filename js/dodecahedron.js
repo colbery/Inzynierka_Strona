@@ -326,12 +326,12 @@ function render()
     requestAnimationFrame(render)
 }
 
-function camera()
+function camera(afov = 70, far = 100, near = 0.1 )
 {
     let aspect = gl.viewportWidth/gl.viewportHeight;
-    let fov = 45.0 * Math.PI / 180.0; //Określenie pola widzenia kamery
-    let zFar = 100.0; //Ustalenie zakresów renderowania sceny 3D (od obiektu najbliższego zNear do najdalszego zFar)
-    let zNear = 0.1;
+    let fov = afov * Math.PI / 180.0; //Określenie pola widzenia kamery
+    let zFar = far; //Ustalenie zakresów renderowania sceny 3D (od obiektu najbliższego zNear do najdalszego zFar)
+    let zNear = near;
     uPMatrix = [
      1.0/(aspect*Math.tan(fov/2)),0                           ,0                         ,0                            ,
      0                         ,1.0/(Math.tan(fov/2))         ,0                         ,0                            ,
@@ -358,7 +358,7 @@ function startGL()
     initShaders()
     initBuffers()
     initTexture(texture)
-    camera()
+    camera(43)
 
     render()
 }
