@@ -353,7 +353,9 @@ function startGL()
     gl.viewportWidth = canvas.width;
     gl.viewportHeight = canvas.height;
 
-    const texture = './images/textures/texture.webp'
+    const texture = './images/textures/texture2.webp'
+    // const texture = './images/textures/1.jpg'
+
 
     initShaders()
     initBuffers()

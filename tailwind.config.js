@@ -22,9 +22,10 @@ module.exports = {
     extend: {
       colors: {
         goldish: "#FFD600",
+        blueish: "#228be6",
         // goldish: "#01c7e4",
         darkish: "#222222",
-        grayish: "#302c2c",
+        grayish: "#333333",
         midGray: "#666",
         whitish: "#ddd",
         blackish: "#1b1b1b",
@@ -34,7 +35,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        bgW: "url('../images/img/net.png')",
+        bgW: "url('../images/whitemode/bgW.png')",
         globeW: "url('../images/whitemode/globeW.png')",
         heartW: "url('../images/whitemode/heartW.png')",
         likeW: "url('../images/whitemode/likeW.png')",
