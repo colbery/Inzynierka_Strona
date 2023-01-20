@@ -789,6 +789,10 @@ video {
   margin-top: 18rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1058,12 +1062,47 @@ video {
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
+.bg-sky-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 249 255 / var(--tw-bg-opacity));
+}
+
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+}
+
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-whitish {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 221 221 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+}
+
 .bg-bgD {
   background-image: url('../images/darkmode/bgD.webp');
 }
 
 .bg-bgW {
-  background-image: url('../images/whitemode/bgW.png');
+  background-image: url('../images/whitemode/bgW4.png');
 }
 
 .bg-contain {
@@ -1240,6 +1279,10 @@ video {
   font-size: 12px;
 }
 
+.text-5xl {
+  font-size: 48px;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -1293,6 +1336,11 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.drop-shadow-black {
+  --tw-drop-shadow: drop-shadow(2px 0px 2px rgba(0, 0, 0, 0.5));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
@@ -1416,10 +1464,15 @@ nav {
   background-color: #fff;
 }
 
-.textBorderBlack
+/* .textBorderBlack
 {
-  -webkit-text-stroke: 5px rgb(255, 0, 0);
+  -webkit-text-stroke: 2px red; 
 }
+
+.textBorderWhite
+{
+  -webkit-text-stroke: 2px green; 
+} */
 
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
@@ -1520,6 +1573,11 @@ nav {
 .dark .dark\:text-darkish {
   --tw-text-opacity: 1;
   color: rgb(34 34 34 / var(--tw-text-opacity));
+}
+
+.dark .dark\:drop-shadow-white {
+  --tw-drop-shadow: drop-shadow(0 2px 0px rgba(1, 1, 1, 1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .dark .hover\:dark\:text-goldish:hover {
@@ -1676,6 +1734,10 @@ nav {
     padding-bottom: 1.25rem;
   }
 
+  .md\:pt-4 {
+    padding-top: 1rem;
+  }
+
   .md\:text-5xl {
     font-size: 48px;
   }
@@ -1802,6 +1864,10 @@ nav {
 
   .xl\:text-\[7rem\] {
     font-size: 7rem;
+  }
+
+  .xl\:text-7xl {
+    font-size: 72px;
   }
 
   .xl\:text-\[8rem\] {

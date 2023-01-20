@@ -41,7 +41,7 @@
     <!-- hero section -->
     <section
       id="hero"
-      class="relative dark:bg-bgD dark:bg-inherit bg-sky-5x`0 bg-bgW bg-no-repeat bg-contain bg-center pb-12"
+      class="relative dark:bg-bgD dark:bg-inherit bg-zinc-100 bg-bgW bg-no-repeat bg-contain bg-center pb-12"
     >
       <!-- conteinerhero -->
       <div class="md:w-2/3 mx-auto px-6 text-center">
@@ -99,17 +99,22 @@
 
         <div class="md:pt-0 dark:text-white">
           <p
-            class="fontSettings text-3xl pt-20 md:pt-0 uppercase tracking-thewidest md:text-5xl xl:text-6xl"
+            class="fontSettings text-3xl pt-20 md:pt-4 uppercase tracking-thewidest md:text-5xl xl:text-7xl drop-shadow-black dark:drop-shadow-white"
           >
+          <span class="textBorderBlack dark:textBorderWhite">
             WYDRUKUJ SWOJE<br />
-            ZDJĘCIE <span class="dark:text-goldish text-blueish ">360°</span>
+            ZDJĘCIE 
+          </span>
+          <span class="dark:text-goldish text-blueish">
+            360°
+          </span>
           </p>
         </div>
 
         <div class="mx-auto">
           <canvas
             id="canvas-hero"
-            class="left-0 md:z-0 mx-auto mt-16 mb-16 md:w-1/2"
+            class="left-0 md:z-0 mx-auto mt-8 mb-8 md:w-1/2"
             height="300"
           ></canvas>
         </div>
@@ -120,7 +125,7 @@
           class="mx-auto mt-5"
         /> -->
         <p
-          class="fontSettings text-4xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap"
+          class="fontSettings text-5xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap drop-shadow-black dark:drop-shadow-"
         >
           teraz tylko za <span class="dark:text-goldish text-blueish">1 zł</span>
         </p>
@@ -134,7 +139,7 @@
       
     </section>
     <nav
-      class="text-white sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-darkish bg-grayish"
+      class="dark:text-white text-darkish sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-darkish bg-zinc-100"
     >
       <!-- flex container for nav items -->
       <!-- <div class="w-full uppercase h-16 md:text-3xl text-2xl">
@@ -714,7 +719,7 @@
         <div class="py-10 flex flex-col md:flex-row">
           <div class="md:w-1/2 p-5 pt-10 justify-start relative z-0">
             <p
-              class="dark:text-white border-y-4 dark:border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-4xl py-3 align-center mb-10 font-sans"
+              class="dark:text-white border-b-4 dark:border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-4xl py-3 align-center mb-10 font-sans"
             >
               wytnij
             </p>

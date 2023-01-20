@@ -35,7 +35,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        bgW: "url('../images/whitemode/bgW.png')",
+        bgW: "url('../images/whitemode/bgW4.png')",
         globeW: "url('../images/whitemode/globeW.png')",
         heartW: "url('../images/whitemode/heartW.png')",
         likeW: "url('../images/whitemode/likeW.png')",
@@ -53,6 +53,10 @@ module.exports = {
         smileD: "url('../images/darkmode/smileD.png')",
         sunD: "url('../images/darkmode/sunD.png')",
       }),
+      dropShadow: {
+        'black': '2px 0px 2px rgba(0, 0, 0, 0.5)',
+        'white': '0 2px 0px rgba(1, 1, 1, 1)',
+      }
     },
   },
   variants: {
