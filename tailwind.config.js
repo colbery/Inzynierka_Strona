@@ -35,7 +35,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        bgW: "url('../images/whitemode/bgW4.png')",
+        bgW: "url('../images/whitemode/bgW4.webp')",
         globeW: "url('../images/whitemode/globeW.png')",
         heartW: "url('../images/whitemode/heartW.png')",
         likeW: "url('../images/whitemode/likeW.png')",
