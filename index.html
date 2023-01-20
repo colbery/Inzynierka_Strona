@@ -35,13 +35,13 @@
     <script src="./js/autoplayMP4.js"></script>
   </head>
   <body
-    class="relative dark:bg-darkish scroll-behavior: smooth;"
+    class="relative text-grayish dark:bg-darkish scroll-behavior: smooth;"
     onload="startGL()"
   >
     <!-- hero section -->
     <section
       id="hero"
-      class="relative bg-bgD white:bg-bgW bg-no-repeat bg-contain bg-center sm:bg-transparent pb-12"
+      class="relative dark:bg-bgD dark:bg-inherit bg-zinc-100 bg-bgW bg-no-repeat bg-contain bg-center pb-12"
     >
       <!-- conteinerhero -->
       <div class="md:w-2/3 mx-auto px-6 text-center">
@@ -49,14 +49,14 @@
           <img
             id="theme-toggle-dark-icon"
             src="./images/darkmode/sunD.svg"
-            class="absolute hidden left-7 transition top-7 ficonH hover:scale-110"
+            class="absolute hidden left-7 transition top-7 md:top-7 ficonH hover:scale-110"
             alt="darkmode"
           />
 
           <img
             id="theme-toggle-white-icon"
             src="./images/whitemode/sunW.svg"
-            class="absolute hidden left-7 transition top-7 ficonW hover:scale-110"
+            class="absolute hidden left-7 transition top-7 md:top-7 ficonH hover:scale-110"
             alt=""
           />
         </button>
@@ -99,17 +99,22 @@
 
         <div class="md:pt-0 dark:text-white">
           <p
-            class="fontSettings text-3xl pt-20 md:pt-0 uppercase tracking-thewidest md:text-5xl xl:text-6xl"
+            class="fontSettings text-3xl pt-20 md:pt-4 uppercase tracking-thewidest md:text-5xl xl:text-7xl drop-shadow-black dark:drop-shadow-white"
           >
+          <span class="textBorderBlack dark:textBorderWhite">
             WYDRUKUJ SWOJE<br />
-            ZDJĘCIE <span class="dark:text-goldish text-blueish">360°</span>
+            ZDJĘCIE 
+          </span>
+          <span class="dark:text-goldish text-blueish">
+            360°
+          </span>
           </p>
         </div>
 
         <div class="mx-auto">
           <canvas
             id="canvas-hero"
-            class="left-0 md:z-0 mx-auto mt-16 mb-16 md:w-1/2"
+            class="left-0 md:z-0 mx-auto mt-8 mb-8 md:w-1/2"
             height="300"
           ></canvas>
         </div>
@@ -120,21 +125,21 @@
           class="mx-auto mt-5"
         /> -->
         <p
-          class="fontSettings text-4xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap"
+          class="fontSettings text-5xl dark:text-white uppercase tracking-thewidest pb-5 hidden md:block whitespace-nowrap drop-shadow-black dark:drop-shadow-"
         >
           teraz tylko za <span class="dark:text-goldish text-blueish">1 zł</span>
         </p>
         <button
           name="print"
-          class="block md:mb-12 -bottom-4 right-5 p-2 md:p-1 lg:p-2 xl:p-3 transition rounded-md w-52 md:w-32 lg:w-44 xl:w-52 bg-goldish hover:scale-95 mb-5 mx-auto md:fixed z-50"
+          class="block md:mb-12 -bottom-4 right-5 p-1 lg:p-2 xl:p-3 transition rounded-md w-32 lg:w-44 xl:w-52 dark:bg-goldish dark:text-darkish text-white bg-blueish  hover:scale-95 mb-5 mx-auto md:fixed z-50"
         >
-          <p class="text-2xl xl:text-3xl uppercase tracking-thewidest ">Dalej</p>
+          <p class="text-2xl xl:text-3xl uppercase tracking-thewidest">Dalej</p>
         </button>
       </div>
       
     </section>
     <nav
-      class="dark:text-white sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-darkish"
+      class="dark:text-white text-darkish sticky z-10 top-0 hidden md:block whitespace-nowrap dark:bg-darkish bg-zinc-100"
     >
       <!-- flex container for nav items -->
       <!-- <div class="w-full uppercase h-16 md:text-3xl text-2xl">
@@ -159,17 +164,17 @@
         >
           <a
             href="#about-us"
-            class="traciking-widest transition-colors duration-300 hover:dark:text-goldish text-blueish"
+            class="traciking-widest transition-colors duration-300 hover:dark:text-goldish hover:text-blueish"
             >About ???</a
           >
           <a
             href="#instruction"
-            class="traciking-widest transition-colors duration-300 hover:dark:text-goldish text-blueish"
+            class="traciking-widest transition-colors duration-300 hover:dark:text-goldish hover:text-blueish"
             >instrukcja</a
           >
           <a
             href="#walksee"
-            class="traciking-widest transition-colors duration-300 hover:dark:text-goldish text-blueish"
+            class="traciking-widest transition-colors duration-300 hover:dark:text-goldish hover:text-blueish"
             >zdjecia 360</a
           >
           <!-- <a
@@ -347,16 +352,17 @@
         <p class="fontSettings text-4xl uppercase tracking-wider md:text-5xl lg:text-6xl pb-4" >Instrukcja</p>
         <div class="text-center pt-16">
           <p
-            class="fontSettingsSub tracking-thewidest text-3xl uppercase mt-8 mb-0 md:mb-4 md:text-4xl lg:text-5xl"
+            class="fontSettingsSub tracking-thewidest text-3xl uppercase my-8 md:mb-4 md:text-4xl lg:text-5xl"
           >
             potrzebne
             przyrządy
           </p>
         </div>
 
-          <div class=" flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap mb-12 text-3xl lg:text-4xl mx-auto justify-between">
+          <div class=" flex sm:flex-col xl:flex-row md:flex-wrap xl:flex-nowrap overflow-x-auto sm:overflow-x-hidden mb-12 text-3xl lg:text-4xl mx-auto justify-between">
 
-              <div class="md:w-1/3 flex pt-16 flex-col px-1 justify-center items-center text-center align-middle sm:mx-auto">
+            <div class="flex basis-1/2">
+              <div class="md:w-1/3 flex pt-4 xl:pt-16 flex-col px-1 justify-center items-center text-center align-middle sm:mx-auto">
                 <p class="dark:text-goldish text-blueish uppercase md:pb-4 lg:pb-10">kartka</p>
                 <svg
                   class="h-36 lg:h-auto"
@@ -392,7 +398,8 @@
                   </g>
                 </svg>
               </div>
-              <div class="md:w-1/3 flex pt-16 flex-col px-1 mx-auto justify-center items-center text-center align-middle">
+              
+              <div class="md:w-1/3 flex pt-4 xl:pt-16 flex-col px-1 mx-auto justify-center items-center text-center align-middle">
                 <p class="dark:text-goldish text-blueish uppercase px-10 md:pb-4 lg:pb-10">nożyczki</p>
                 <svg
                   class="h-36 lg:h-auto"
@@ -469,7 +476,9 @@
                   </g>
                 </svg>
               </div>
+            </div>
 
+            <div class="flex md:mt-12 xl:mt-auto basis-1/2">
               <div class="md:w-1/3 flex pt-16 flex-col px-1 mx-auto justify-center items-center text-center align-middle">
                 <p class="dark:text-goldish text-blueish uppercase md:pb-4 lg:pb-10">klej</p>
                 <svg
@@ -580,16 +589,97 @@
                   </g>
                 </svg>
               </div>
+
+              <div class="md:w-1/3 flex pt-16 flex-col px-1 mx-auto justify-center items-center text-center align-middle">
+                <p class="dark:text-goldish text-blueish uppercase md:pb-4 lg:pb-10">drukarka</p>
+
+                <svg
+                class="h-36 lg:h-auto"
+                  width="220"
+                  height="220"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="mb-20 md:mb-0"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 256 256"
+                >
+                  <title>Print</title>
+                  <g>
+                    <title>Layer 1</title>
+                    <path
+                      stroke="currentColor"
+                      id="svg_1"
+                      stroke-width="8"
+                      stroke-linejoin="round"
+                      fill="none"
+                      d="m175,160l8.8125,0a14.73156,16.048 0 0 0 14.6875,-16l0,-64a14.73156,16.048 0 0 0 -14.6875,-16l-111.625,0a14.73156,16.048 0 0 0 -14.6875,16l0,64a14.73156,16.048 0 0 0 14.6875,16l8.8125,0"
+                    />
+                    <rect
+                      stroke="currentColor"
+                      rx="5"
+                      id="svg_6"
+                      height="53"
+                      width="86"
+                      y="10.5"
+                      x="85"
+                      stroke-width="8"
+                      fill="none"
+                    />
+                    <rect
+                      rx="5"
+                      id="svg_5"
+                      height="105"
+                      width="86"
+                      y="134.5"
+                      x="85"
+                      stroke-width="8"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                    <line
+                      id="svg_7"
+                      y2="162.5"
+                      x2="146.5"
+                      y1="162.5"
+                      x1="101.5"
+                      stroke-width="8"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                    <line
+                      id="svg_8"
+                      y2="184.5"
+                      x2="129.5"
+                      y1="184.5"
+                      x1="102.5"
+                      stroke-width="8"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                    <ellipse
+                      ry="9"
+                      rx="8.5"
+                      id="svg_9"
+                      cy="88.5"
+                      cx="173"
+                      stroke="currentColor"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
+
+          </div>
+      </div>
 
       <div class="text-center mx-auto w-2/3 pt-20">
         <p
-          class="tracking-thewidest text-3xl md:text-4xl lg:text-6xl uppercase my-8 md:mt-20 md:mb-12 dark:text-white"
+          class="tracking-thewidest text-3xl md:text-4xl lg:text-5xl uppercase my-8 md:mt-20 md:mb-12 dark:text-white"
         >
           jak to zrobić
         </p>
 
-        <!-- <div class="py-10 flex flex-col-reverse md:flex-row mx-auto"> --> 
+        <!-- <div class="py-10 flex flex-col-reverse md:flex-row mx-auto"> -->
           <!-- <div class="md:w-1/2 flex justify-end">
             <video autoplay playsinline loop class="src w-full transition">
               <source src="./videos/4.mp4" type="video/mp4" />
@@ -599,7 +689,7 @@
           </div> -->
           <!-- <div class="md:w-1/2 p-5 pt-10 relative z-0"> -->
             <!-- <p
-              class="text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="text-white border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
             >
               wydrukuj
             </p>
@@ -624,17 +714,17 @@
               class="sr absolute -right-full transition top-10 hidden dark:md:block dark:z-10 "
             /> -->
           <!-- </div> -->
-        </div>
+        <!-- </div> -->
 
         <div class="py-10 flex flex-col md:flex-row">
           <div class="md:w-1/2 p-5 pt-10 justify-start relative z-0">
             <p
-              class="dark:text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="dark:text-white border-b-4 dark:border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-4xl py-3 align-center mb-10 font-sans"
             >
               wytnij
             </p>
             <p
-              class="contentFontSettings text-2xl font-light text-center dark:text-white"
+              class="contentFontSettings md:text-3xl font-light text-center dark:text-white"
             >
               Po wydrukowniu wytnij siatke wielościanu wzdłuż zewnętrznych
               krawędzi obrazu.
@@ -654,14 +744,14 @@
           </div>
           <div class="md:w-1/2 flex justify-end hidden dark:flex">
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/1-mpeg4-h264-lowest-dark.mp4" type="video/mp4" />
+              <source src="./videos/1-mpeg4-h264-lowest-dark-srgb.mp4" type="video/mp4" />
               <!-- <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
             </video>
           </div>
           <div class="md:w-1/2 flex justify-end dark:hidden">
             <video autoplay playsinline loop class="src w-full transition">
-              <source src="./videos/1-mpeg4-h264-lowest.mp4" type="video/mp4" />
+              <source src="./videos/1-mpeg4-h264-lowest-srgb.mp4" type="video/mp4" />
               <!-- <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
             </video>
@@ -678,12 +768,12 @@
           </div>
           <div class="md:w-1/2 p-5 pt-10 relative z-0">
             <p
-              class="dark:text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="dark:text-white border-b-4 dark:border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-4xl py-3 align-center mb-10 font-sans"
             >
               zegnij
             </p>
             <p
-              class="contentFontSettings text-2xl font-light text-center dark:text-white"
+              class="contentFontSettings md:text-3xl font-light text-center dark:text-white"
             >
               Wycięty obraz zegnij wzdłuż wewnętrznych krawędzi, tak aby siatka
               sama się składała w kształt przypominający kule.
@@ -706,12 +796,12 @@
         <div class="py-10 flex flex-col md:flex-row">
           <div class="md:w-1/2 p-5 pt-10 justify-start">
             <p
-              class="dark:text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="dark:text-white border-b-4 dark:border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-4xl py-3 align-center mb-10 font-sans"
             >
               sklej
             </p>
             <p
-              class="contentFontSettings text-2xl font-light text-center dark:text-white"
+              class="contentFontSettings md:text-3xl font-light text-center dark:text-white"
             >
               Nałóż klej na przeznaczone do tego elementy nie będące częscią
               wybranego wcześniej zdjęcia lub obrazu.
@@ -729,12 +819,12 @@
         <div class="py-10 flex flex-col md:flex-row-reverse">
           <div class="md:w-1/2 p-5 pt-10 justify-start">
             <p
-              class="dark:text-white border-b-2 border-goldish uppercase tracking-thewidest text-3xl py-3 align-center mb-10 font-sans"
+              class="dark:text-white border-b-4 dark:border-b-2 dark:border-goldish border-blueish uppercase tracking-thewidest text-4xl py-3 align-center mb-10 font-sans"
             >
               złóż
             </p>
             <p
-              class="contentFontSettings text-2xl font-light text-center dark:text-white"
+              class="contentFontSettings md:text-3xl font-light text-center dark:text-white"
             >
               Złóż siatke w dziesięciościan foremny przykladajać klejone
               wcześniej elementy do wewnętrznych częsci bryły.
@@ -778,7 +868,7 @@
             />
 
             <h5
-              class="text-3xl font-bold text-center uppercase text-yellow-500 tracking-thewidest"
+              class="text-3xl font-bold text-center uppercase text-blueish dark:text-goldish tracking-thewidest"
             >
               łatwe
             </h5>
@@ -818,7 +908,7 @@
               class="mx-auto ficonH hidden"
             />
             <h5
-              class="text-3xl font-bold text-center uppercase text-yellow-500 tracking-thewidest"
+              class="text-3xl font-bold text-center uppercase text-blueish dark:text-goldish tracking-thewidest"
             >
               fajne
             </h5>
@@ -860,7 +950,7 @@
             />
 
             <h5
-              class="text-3xl uppercase font-bold text-center text-yellow-500 tracking-thewidest"
+              class="text-3xl uppercase font-bold text-center text-blueish dark:text-goldish tracking-thewidest"
             >
               ładne
             </h5>
@@ -886,7 +976,7 @@
           <div class="flex text-white ">
             <!-- container walksee -->
             <div
-              class="bg-blackish w-full rounded-3xl flex flex-col md:flex-row text-center justify-center pt-12 md:px-8"
+              class="dark:bg-blackish bg-grayish w-full rounded-3xl flex flex-col md:flex-row text-center justify-center pt-12 md:px-8"
 
             >
               <!--left side  -->
@@ -947,9 +1037,9 @@
         <div class="mt-72 my-36">
           <button
             name="print"
-            class="border-goldish border-2 transition rounded-lg w-full dark:text-white md:text-4xl lg:text-5xl xl:text-[7rem] 2xl:text-[8rem] text-[2rem] font-sans py-10 hover:scale-95"
+            class="dark:border-goldish dark:bg-darkish bg-blueish border-2 dark:text-white text-grayish transition rounded-lg w-full md:text-5xl lg:text-6xl xl:text-[8rem] text-[2rem] font-sans py-10 hover:scale-95"
           >
-            Sprawdź to <span class="dark:text-goldish text-blueish">teraz</span>
+            Sprawdź to <span class="dark:text-goldish text-white">teraz</span>
           </button>
         </div>
       </div>
