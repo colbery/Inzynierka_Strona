@@ -60,7 +60,7 @@ function initBuffers()
         const t = (1 + Math.sqrt(5))/2;
         const d = t - 1;
 
-        console.log(`a = ${2*d}`);
+        // console.log(`a = ${2*d}`);
 
         let vertexPosition = [
         1,  1,  1,
@@ -105,10 +105,8 @@ function initBuffers()
         0,t+0.00001,-0.00001,
         0,-t+0.00001,-0.00001,
         0,-t+0.00001,0.00001,
-
-
         ]
-
+        // console.log(`vertex position: ${vertexPosition.length}`);
         return vertexPosition;
     }
 
@@ -184,6 +182,7 @@ function initBuffers()
         5,35,27,
         1,35,28
     ]
+    // console.log('indices');
 
     const dodecahedronPosition = createDodecahedron()
     const dodecahedronCoords = createCoords()
