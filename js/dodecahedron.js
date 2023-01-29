@@ -116,19 +116,19 @@ function initBuffers()
     
         let vertexCoords = [];
         
-        for(let i = 0; i < position.length; i += 3){
-        const X = position[i+0];
-        const Y = position[i+1];
-        const Z = position[i+2];
-        const fi = Math.atan2(-Z, X); //atan(-Z/X)
-        const phi = Math.asin(Y / Math.sqrt(X*X+Y*Y+Z*Z)); //asin(Y/|R|)
-        const u = fi / (2 * Math.PI) + 0.5;
-        const v = phi / (Math.PI) + 0.5;
-    
-        vertexCoords.push(...[u,v]);
+        for(let i = 0; i < position.length; i += 3)
+        {
+            const X = position[i+0];
+            const Y = position[i+1];
+            const Z = position[i+2];
+            const fi = Math.atan2(-Z, X); //atan(-Z/X)
+            const phi = Math.asin(Y / Math.sqrt(X*X+Y*Y+Z*Z)); //asin(Y/|R|)
+            const u = fi / (2 * Math.PI) + 0.5;
+            const v = phi / (Math.PI) + 0.5;
+        
+            vertexCoords.push(...[u,v]);
         }
-    
-        console.log(position.length);
+        
         return vertexCoords;
     }
 
